@@ -57,12 +57,18 @@ const Landplot = props => {
               </>
             }
 
-            {typeLandplot === 'remove' && <button class="btn-remove">REMOVE</button>}
+            {typeLandplot === 'remove' && <button className="btn-remove">REMOVE</button>}
 
             {typeLandplot === 'sellAndTransfer' &&
-              <div class="d-flex">
-                <button class="btn-sell">SELL</button>
-                <button class="btn-transfer">TRANSFER</button>
+              <div className="d-flex">
+                <button
+                  className="btn-sell"
+                  onClick={()=>dispatch({type: 'SHOW_MODAL_SELL'})}
+                >SELL</button>
+                <button
+                  className="btn-transfer"
+                  onClick={()=>dispatch({type: 'SHOW_MODAL_TRANSFER'})}
+                >TRANSFER</button>
               </div>
             }
           </div>

@@ -5,6 +5,9 @@ export const BuyLandContext = React.createContext()
 const initialState = {
   numOfItems: 0,
   typeLandplot: '',
+  showModalBuy: false,
+  showModalSell: false,
+  showModalTransfer: false,
 }
 
 const reducer = (state, action) => {
@@ -27,7 +30,43 @@ const reducer = (state, action) => {
         ...state,
         numOfItems: state.numOfItems + 1
       }
+
+    case 'SHOW_MODAL_BUY':
+      return {
+        ...state,
+        showModalBuy: true
+      }
+
+    case 'EXIT_MODAL_BUY':
+      return {
+        ...state,
+        showModalBuy: false
+      }
+
+    case 'SHOW_MODAL_SELL':
+      return {
+        ...state,
+        showModalBuy: true
+      }
+
+    case 'EXIT_MODAL_SELL':
+      return {
+        ...state,
+        showModalBuy: false
+      }
       
+    case 'SHOW_MODAL_TRANSFER':
+      return {
+        ...state,
+        showModalBuy: true
+      }
+
+    case 'EXIT_MODAL_TRANSFER':
+      return {
+        ...state,
+        showModalBuy: false
+      }  
+  
     default:
       return state
   }

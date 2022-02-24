@@ -2,6 +2,7 @@ import { BuyLandContext } from 'contexts/BuyLandContext';
 import React from 'react';
 
 const Cart = props => {
+  const dispatch = React.useContext(BuyLandContext).dispatch
   const numOfItems = React.useContext(BuyLandContext).state.numOfItems
 
   return (
@@ -73,7 +74,10 @@ const Cart = props => {
             <small className='text-white'>$120 USD</small>
           </div>
         </div>
-        <button className="btn-buy">
+        <button
+          className="btn-buy"
+          onClick={()=>dispatch({type: 'SHOW_MODAL_BUY'})}
+        >
           BUY
         </button>
       </div>
