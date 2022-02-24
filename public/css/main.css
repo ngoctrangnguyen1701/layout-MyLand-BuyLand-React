@@ -1,0 +1,56 @@
+* {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* @font-face {
+  font-family: 'font_primary';
+  src: url("../webfonts/Progress-Bold.ttf");
+} */
+
+/* @font-face {
+  font-family: 'font_primary';
+  src: url("../webfonts/Progress-Bold.ttf");
+} */
+
+@font-face {
+  font-family: 'font_primary';
+  src: url("../webfonts/Goldman-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Helvetica_Bold';
+  src: url("../webfonts/Helvetica-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Helvetica_Light_Oblique';
+  src: url("../webfonts/Helvetica-LightOblique.otf");
+}
+
+@font-face {
+  font-family: 'Progress_Bold_Italic';
+  src: url("../webfonts/Progress Bold Italic.ttf");
+}
+
+@font-face {
+  font-family: 'Helvetica_Neue';
+  src: url("../webfonts/HelveticaNeue-Medium.otf");
+}
+
+@font-face {
+  font-family: 'HemiHeadRg_BoldItalic';
+  src: url("../webfonts/FontsFree-Net-hemi-head-bd-it.ttf");
+}
+
+@font-face {
+  font-family: 'Helvetica_Regular';
+  src: url("../webfonts/Helvetica.ttf");
+}
+
+body{
+  font-family: font_primary;
+}
