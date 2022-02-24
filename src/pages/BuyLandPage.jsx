@@ -1,11 +1,14 @@
 import React from 'react';
 
+import BuyLandContextProvider from 'contexts/BuyLandContext';
+import BuyLand from '../components/BuyLand/BuyLand';
+
 const BuyLandPage = props => {
   return (
-    <div>
-      Buy Land
-    </div>
-  );
+    <BuyLandContextProvider>
+      <BuyLand/>
+    </BuyLandContextProvider>
+  )
 };
 
 export default BuyLandPage;
