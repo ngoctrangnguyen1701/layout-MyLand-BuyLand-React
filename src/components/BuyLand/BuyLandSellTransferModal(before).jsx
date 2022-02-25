@@ -1,19 +1,6 @@
 import React from 'react';
 import { BuyLandContext } from 'contexts/BuyLandContext';
 
-import {
-  Modal,
-  ModalFrame,
-  ModalHeader,
-  ModalContent,
-  Input,
-  HBG,
-  ModalImg,
-  NoAndReward,
-  Progress,
-  ModalBtn,
-} from './styles/BuyLandModalStyle'
-
 const BuyLandSellTransferModal = props => {
   const dispatch = React.useContext(BuyLandContext).dispatch
   const showModalSell = React.useContext(BuyLandContext).state.showModalSell
@@ -26,73 +13,76 @@ const BuyLandSellTransferModal = props => {
   }
 
   return (
-    <Modal
-      onClick={onClose}  //--> xử lý click outside
-      show={show}
+    <section
+      id="modal-land"
+      style={{display: show ? 'flex' : 'none'}}
+      className={show ? 'show-modal-land' : ''}
     >
-      <ModalFrame
-        show={show}
-        onClick={e=>{e.stopPropagation()}} //--> xử lý click outside
+      <div
+        // className="modal-land box pb-5"
+        className={show ? 'modal-land box pb-5 show-modal-land-box' : 'modal-land box pb-5'}
       >
-        <ModalHeader>
+        <div className="modal-land-header">
           {/* CHANGE CODE IS HERE */}
           {showModalSell && 'SELL'}
           {showModalTransfer && 'TRANSFER'}
-        </ModalHeader>
-        <ModalContent>
+        </div>
+        <div className="modal-land-content">
             <div className="px-5 d-flex mt-5">
               {/* CHANGE CODE IS HERE */}
               {showModalSell && 
                 <>
-                  <Input className="form-control flex-grow-1" placeholder="Price"/>
-                  <HBG>HBG</HBG>
+                  <input className="form-control flex-grow-1 modal-land-input" placeholder="Price"/>
+                  <div className="modal-land-hbg">HBG</div>
                 </>}
-              {showModalTransfer && <Input className="form-control text-center" placeholder="Address"></Input>}
+              {showModalTransfer && <input class="form-control flex-grow-1 modal-land-input text-center" placeholder="Address"></input>}
             </div>
 
           <div className="px-5 mt-5 d-flex align-items-center">
-            <ModalImg/>
+            <div className="modal-land-img"></div>
             <div className="flex-grow-1 ms-4">
-              <NoAndReward>
+              <div className="no-and-reward">
                 <label>No</label>
                 <span>051297</span>
-              </NoAndReward>
-              <NoAndReward>
+              </div>
+              <div className="no-and-reward">
                 <label>Reward</label>
                 <span>534 HBG</span>
-              </NoAndReward>
-              <Progress className="mt-5">
+              </div>
+              <div className="modal-land-line mt-5">
                 <div className="line-percent"></div>
                 <span>Minning: 50/100</span>
-              </Progress>
+              </div>
             </div>
           </div>
 
           <div className="row mt-5">
             <div className="col-6">
-              <ModalBtn
+              <button
+                className="modal-land-btn"
                 onClick={onClose}
               >
                 <div className="circle-white"></div>
                 <div className="text">
                   CONFIRM
                 </div>
-              </ModalBtn>
+              </button>
             </div>
             <div className="col-6">
-              <ModalBtn
+              <button
+                className="modal-land-btn"
                 onClick={onClose}
               >
                 <div className="circle-white"></div>
                 <div className="text">
                   CANCEL
                 </div>
-              </ModalBtn>
+              </button>
             </div>
           </div>
-        </ModalContent>
-      </ModalFrame>
-    </Modal>
+        </div>
+      </div>
+    </section>
   );
 };
 

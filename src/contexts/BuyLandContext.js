@@ -46,25 +46,25 @@ const reducer = (state, action) => {
     case 'SHOW_MODAL_SELL':
       return {
         ...state,
-        showModalBuy: true
+        showModalSell: true
       }
 
     case 'EXIT_MODAL_SELL':
       return {
         ...state,
-        showModalBuy: false
+        showModalSell: false
       }
       
     case 'SHOW_MODAL_TRANSFER':
       return {
         ...state,
-        showModalBuy: true
+        showModalTransfer: true
       }
 
     case 'EXIT_MODAL_TRANSFER':
       return {
         ...state,
-        showModalBuy: false
+        showModalTransfer: false
       }  
   
     default:
