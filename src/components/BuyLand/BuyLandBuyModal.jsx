@@ -6,11 +6,6 @@ import {
   ModalFrame,
   ModalHeader,
   ModalContent,
-  Input,
-  HBG,
-  ModalImg,
-  NoAndReward,
-  Progress,
   ModalBtn,
 } from './styles/BuyLandModalStyle'
 

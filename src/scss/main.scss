@@ -34,8 +34,6 @@ $color-red-2: #E03500;
 
 @mixin btnGradient($direction, $color-gradient-1, $color-gradient-2, $border-color, $text-shadow) {
   background-image: linear-gradient(to $direction, $color-gradient-1, $color-gradient-2);
-  // background-image: linear-gradient(to right, #BD4500, #400000);
-  // border: 1px solid $color-red;
   border: 1px solid $border-color;
   padding: 5px 30px;
 
@@ -115,26 +113,11 @@ main{
   }
 }
 
-// #content{
 #content-buy-land{
   height: calc(100vh - 144px);
   width: 100%;
   position: absolute;
   top: 144px;
-  // position: relative;
-  // &:before{
-  //   content: '';
-  //   // background-color: #00FF00;
-  //   // background-image: linear-gradient(to bottom, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0.3));
-  //   box-shadow: 5px 40px 40px rgba(0, 255, 0, 0.3);
-  //   background: transparent;
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 40px;
-  //   display: block;
-  //   top: -50px;
-  //   // 0 10px 100px rgb(0 255 0 / 49%)
-  // }
 
   .main{
     background-image: url('../../public/images/bg-main.jpg');
@@ -142,21 +125,6 @@ main{
     // width: 100%;
 
     position: absolute;
-    // box-shadow: 5px 5px 40px rgba(0, 255, 0, 0.8);
-    // position: relative;
-    // &:before{
-    //   content: '';
-    //   // background-color: #00FF00;
-    //   // background-image: linear-gradient(to bottom, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0.5), rgba(0, 255, 0, 0.3));
-    //   box-shadow: 5px 5px 40px rgba(0, 255, 0, 0.8);
-    //   background: transparent;
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 40px;
-    //   display: block;
-    //   // 0 10px 100px rgb(0 255 0 / 49%)
-    // }
-    
     .land{
       &-left{
         background-color: rgba(0, 0, 0, 0.7);
@@ -199,7 +167,6 @@ main{
         .land-id-small{
           background-color: $color-green;
           width: 100px;
-          // padding: 5px 0 5px 5px;
           padding-left: 5px;
           margin: 10px 0;
   
@@ -222,23 +189,7 @@ main{
           font-size: 13px;
           @extend %text-shadow-green;
         }
-  
-        // .btn-add-to-cart{
-        //   height: 27px;
-        //   line-height: 27px;
-        //   padding: 0 15px;
-        //   border: 1px solid $color-green;
-        //   // border: 2px solid rgba(0, 255, 0, 0.3);
-        //   // border: none;
-        //   box-shadow: 1px 1px 5px $color-green;
-  
-        //   font-size: 12px;
-        //   font-family: Progress_Bold_Italic;
-        //   color: white;
-        // }
       }
-  
-      
   
       &-right-bottom{
         background-image: url('../../public/images/bg-land-right-01.jpg');
@@ -261,8 +212,6 @@ main{
     line-height: 27px;
     padding: 0 15px;
     border: 1px solid $color-green;
-    // border: 2px solid rgba(0, 255, 0, 0.3);
-    // border: none;
     box-shadow: 1px 1px 5px $color-green;
 
     font-size: 12px;
@@ -275,387 +224,18 @@ main{
     }
   }
 
-
-  // .btn-remove, .btn-sell, .btn-transfer{
-  //   // background-image: linear-gradient(to right, #BD4500, #400000);
-  //   border: 1px solid $color-red;
-  //   padding: 5px 30px;
-
-  //   color: white;
-  //   font-family: Progress_Bold_Italic;
-  //   font-size: 12px;
-  //   text-shadow: 2px 2px 15px rgba(189, 69, 0, 0.8);
-  // }
-
   .btn-remove{
-    // background-image: linear-gradient(to right, #BD4500, #400000);
     @include btnGradient(right, #BD4500, #400000, $color-red, 2px 2px 15px rgba(189, 69, 0, 0.8))
   }
 
   .btn-sell{
-    // background-image: linear-gradient(to right, #DD0000, #790000);
     @include btnGradient(right, #DD0000, #790000, #E50303, 2px 2px 15px rgba(221, 0, 0, 0.8));
     padding-left: 20px;
     padding-right: 20px;
   }
 
   .btn-transfer{
-    // @extend %background-gradient-green-top-bottom;
     @include btnGradient(bottom, $color-gradient-green-2, $color-gradient-green-1, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
     margin-left: 15px
   }
-
-  .side-bar{
-    background-color: #110300;
-    height: 100%;
-    color: white;
-    position: absolute;
-    right: 0;
-    z-index: 2;
-
-    &-header{
-      font-size: 43px;
-      padding: 20px 30px; 
-    }
-    &-num-basket{
-      font-family: 'Helvetica_Bold';
-      color: $color-red;
-    }
-    &-line{
-      height: 1px;
-      background-color: $color-red;
-      // background-color: #ccc;
-    }
-    &-content{
-      padding: 20px 30px;
-
-      &-title{
-        color: white;
-        font-size: 23px;
-      }
-
-      &-landplots{
-        padding-left: 10px;
-        margin-top: 20px;
-        .col-4{
-          padding-left: 0;
-          padding-right: 10px;
-        }
-      }
-
-      &-landplots-items{
-        height: 30px;
-        line-height: 30px;
-        background-color: $color-green-3;
-        border: 1px solid $color-green;
-        // margin: 0 10px 10px 0;
-        // margin-bottom: 15px;
-        margin-bottom: 10px;
-        cursor: pointer;
-
-        color: white;
-        font-size: 20px;
-        text-align: center;
-
-        &:hover{
-          background-color: $color-green;
-        }
-      }
-    }
-
-    &-bottom{
-      input{
-        outline: none;
-        height: 50px;
-        border: 1px solid $color-green;
-        border-radius: 0px;
-        background: none;
-
-        font-family: Helvetica_Light_Oblique;
-        font-size: 24px;
-        line-height: 50px;
-        color: #C1C1C1;
-      }
-
-      .btn-apply{
-        width: 100px;
-        height: 50px;
-        margin-left: 15px;
-
-        font-size: 20px;
-      }
-
-      .total{
-        small{
-          font-size: 24px;
-          color: #C1C1C1;
-        }
-        span{
-          font-size: 45px;
-          color: white;
-          display: block;
-        }
-      }
-      .btn-buy{
-        height: 50px;
-        width: 100%;
-        font-size: 25px;
-      }
-    }
-
-    .empty-cart{
-      span{
-        font-size: 23px;
-        color: $color-red;
-        display: inline-block;
-        margin-left: 15px;
-      }
-      &-tutorial{
-        font-size: 24px;
-      }
-    }
-  }
 };
-
-/* MODAL */
-// .show-modal-land{
-//   // z-index: 1000;
-//   animation: show-modal-land 0.5s forwards;
-// }
-// .show-modal-land{
-//   z-index: 1000;
-//   opacity: 1;
-//   transition: 1s;
-// }
-// .hidden-modal-land{
-//   // z-index: -1000;
-//   animation: hidden-modal-land 0.3s forwards;
-// }
-// @keyframes show-modal-land {
-//   // 100%{opacity: 1; z-index: 1000;}
-//   100%{opacity: 1;}
-// }
-// @keyframes hidden-modal-land {
-//   // 80%{opacity: 0; z-index: 1000;}
-//   100%{opacity: 0; z-index: -1000;}
-// }
-// .show-modal-land-box{
-//   animation: show-modal-land-box 0.5s linear forwards;
-//   //forwards dùng để giữ trạng thái của element sau khi chạy animation xong
-// }
-// .hidden-modal-land-box{
-//   animation: show-modal-land-box 0.5s linear forwards;
-//   //forwards dùng để giữ trạng thái của element sau khi chạy animation xong
-// }
-// @keyframes show-modal-land-box {
-//   100%{transform: translateY(0); opacity: 1;}
-// }
-// @keyframes hidden-modal-land-box {
-//   100%{transform: translateY(-100px); opacity: 1;}
-// }
-
-// #modal-land, .modal-land-frame{
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: rgba(0, 0, 0, 0.7);
-//   display: flex;
-
-//   position: absolute;
-//   top: 0;
-//   // z-index: 1000;
-//   z-index: -1000;
-//   // opacity: 1;
-//   opacity: 0;
-//   transition: .5s;
-
-//   .modal-land {
-//     &.box{
-//       @include bgGradient(to bottom, $color-black, $color-gradient-green-black1);
-//       width: 620px;
-//       margin: auto;
-  
-//       border: 1px solid $color-green;
-//       box-shadow: 2px 2px 15px $color-green;
-//       opacity: 0;
-//       transform: translateY(-100px);
-//       transition: .5s;
-//     }
-//     &-header{
-//       @extend %text-shadow-green;
-//       color: white;
-//       text-align: center;
-//       font-size: 28px;
-//       font-family: Progress_Bold_Italic;
-  
-//       background-color: $color-gradient-green-2;
-//       padding: 10px 0;
-//     }
-
-//     &-content-text{
-//       color: white;
-//       text-align: center;
-//       p{
-//         font-family: Helvetica_Neue;
-//         font-size: 28px;
-//       }
-//       span{
-//         font-family: font_primary;
-//         color: $color-green;
-//       }
-//     }
-
-//     &-input{
-//       outline: none;
-//       height: 50px;
-//       border: 1px solid $color-green;
-//       border-radius: 0px;
-//       background: none;
-
-//       font-family: Helvetica_Light_Oblique;
-//       font-size: 24px;
-//       line-height: 50px;
-//       color: #C1C1C1;
-
-//       &:focus{
-//         box-shadow: none;
-//       }
-//     }
-
-//     &-hbg{
-//       background-color: $color-green;
-//       padding: 0 20px;
-//       height: 50px;
-
-//       color: #002100;
-//       line-height: 50px;
-//       font-family: Progress_Bold_Italic;
-//       font-size: 28px;
-//     }
-
-//     &-img{
-//       background-image: url('../../public/images/land.png');
-//       background-position: center;
-//       width: 130px;
-//       height: 130px;
-//       border: 1px solid $color-green;
-//     }
-
-//     .no-and-reward{
-//       display: flex;
-//       font-size: 25px;
-//       color: white;
-//       font-family: font_primary;
-
-//       span{
-//         color: $color-green;
-//         display: inline-block;
-//         margin-left: 20px;
-//       }
-//     }
-  
-//     &-line{
-//       @include bgGradient(45deg, $color-gradient-green-1, $color-gradient-green-2);
-//       border: 1px solid $color-green;
-//       position: relative;
-//       height: 15px;
-
-//       .line-percent{
-//         background-color: $color-green;
-//         width: 50%;
-//         height: 100%;
-//       }
-
-//       span{
-//         display: inline-block;
-//         width: 100%;
-//         height: 100%;
-//         text-align: center;
-//         font-family: Helvetica_Neue;
-//         color: white;
-//         font-size: 15px;
-
-//         position: absolute;
-//         z-index: 1;
-//         top: -5px;
-//       }
-//     }
-    
-//     &-btn{
-//       width: 130px;
-//       height: 41px;
-//       // background-color: #031100;
-//       background-color: $color-green;
-//       margin: 0 auto;
-//       display: block;
-//       // border: 1px solid $color-green;
-//       border: none;
-//       box-shadow: 1px 1px 5px $color-green;
-
-//       line-height: 41px;
-//       font-size: 22px;
-//       font-family: Progress_Bold_Italic;
-//       color: white;
-//       @extend %text-shadow-green;
-
-//       position: relative;
-//       overflow: hidden;
-
-//       &:hover{
-//         .text{
-//           @include bgGradient(45deg, $color-gradient-green-1, $color-gradient-green-2);
-//           color: $color-green;
-//           transition: .3s;
-//         }
-//         .circle-white{
-//           opacity: 1;
-//           animation: border-run 1s linear infinite;
-//         }
-//         // @include bgGradient(45deg, $color-gradient-green-1, $color-gradient-green-2);
-//         // color: $color-green;
-//       }
-//       .circle-white{
-//         width: calc(130px * 1.2);
-//         height: calc(130px * 1.2);
-//         border-radius: 50%;
-
-//         // background-color: white;
-//         background-color: $color-green;
-//         background-repeat: no-repeat;
-//         background-size: 50% 50%, 50% 50%;
-//         background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-//         // opacity: .5;
-//         // background-image: linear-gradient(#000, #000), linear-gradient(blue, blue);
-//         background-image: linear-gradient(white, white), linear-gradient($color-green, $color-green);
-
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         left: -13px;
-//         top: -58px;
-//         opacity: 0;
-//       }
-//       .text{
-//         background-color: #031100;
-//         // background-color: pink;
-//         width: calc(100% - 3px);
-//         height: calc(100% - 3px);
-
-//         position: absolute;
-//         z-index: 1;
-//         top: 1.5px; //phân nửa của 3px cái trừ ra khi tính width cho text bên trong
-//         left: 1.5px;
-//         transition: .3s;
-//       }
-//     }
-//   } 
-// }
-
-// @keyframes border-run {
-//   100%{transform: rotate(360deg);}
-// }
-
-// .show-modal-land{
-//   z-index: 1000;
-//   opacity: 1;
-//   transition: .5s;
-// }

@@ -1,88 +1,88 @@
 import { BuyLandContext } from 'contexts/BuyLandContext';
 import React from 'react';
 
+import {
+  Sidebar,
+  SidebarHeader,
+  SidebarNumBasket,
+  SidebarLine,
+  SidebarContent,
+  SidebarLandplots,
+  SidebarLandplotsItem,
+  InputCoupond,
+  BtnApply,
+  Total,
+  BtnBuy,
+} from './styles/SidebarStyle'
+
 const Cart = props => {
   const dispatch = React.useContext(BuyLandContext).dispatch
   const numOfItems = React.useContext(BuyLandContext).state.numOfItems
 
   return (
-    <div className="col-3 side-bar ps-0" style={{background: 'black'}}>
-      <div className="side-bar-header">
-        <span className="side-bar-title">Cart:</span>
-        <span className="side-bar-num-basket d-inline-block ms-2">{numOfItems}</span>
-      </div>
-      <div className="side-bar-line mx-4" style={{background: '#3D3D3D'}}></div>
-      <div className="side-bar-content">
-        <div className="side-bar-content-title">Landplots</div>
-        <div className="row flex-wrap side-bar-content-landplots">
+    <Sidebar
+      className="col-3 ps-0" 
+      backgroundColor='black'
+    >
+      <SidebarHeader>
+        <span>Cart:</span>
+        <SidebarNumBasket>{numOfItems}</SidebarNumBasket>
+      </SidebarHeader>
+      <SidebarLine
+        className='mx-4'
+        backgroundColor='#3D3D3D'
+      />
+      <SidebarContent>
+        <div className="title">Landplots</div>
+        <SidebarLandplots>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
           <div className="col-4">
-            <div className="side-bar-content-landplots-items">
-              051297
-            </div>
+            <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-      </div>
+      </SidebarLandplots>
 
-      <div className="side-bar-line my-4" style={{background: '#3D3D3D'}}></div>
+      <SidebarLine
+        className='my-4'
+        backgroundColor='#3D3D3D'
+      />
 
-      <div className="side-bar-bottom">
+      <div>
         <div className="d-flex align-items-center">
-          <div className="flex-grow-1">
-            <input className="form-control" placeholder="Enter Coupond Code"/>
-          </div>
-          <button className="btn-apply background-gradient-green-2">APPLY</button>
+          <InputCoupond className="form-control" placeholder="Enter Coupond Code"/>
+          <BtnApply>APPLY</BtnApply>
         </div>
 
-        <div className="d-flex align-items-center total my-4">
+        <Total>
           <small className="d-block">Total</small>
           <div className="ms-auto">
             <span className="land-id-large">150 HBG</span>
             <small className='text-white'>$120 USD</small>
           </div>
-        </div>
-        <button
-          className="btn-buy"
-          onClick={()=>dispatch({type: 'SHOW_MODAL_BUY'})}
-        >
-          BUY
-        </button>
+        </Total>
+        <BtnBuy>BUY</BtnBuy>
       </div>
-      </div>
-    </div>
+      </SidebarContent>
+    </Sidebar>
   );
 };
 

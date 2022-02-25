@@ -32,8 +32,7 @@ const Landplot = props => {
             <div className="d-flex status-and-price">
               <label>Status</label>
               {/* CHANGE LANDPLOT IS HERE  */}
-              {typeLandplot === 'addToCart' || typeLandplot === 'remove' && <span>Available</span>}
-              {typeLandplot === 'soild' && <span style={{color: '#FF4200', fontSize: '16px'}}>SOILD</span>}
+              {typeLandplot !== 'solid' ? <span>Available</span> : <span style={{color: '#FF4200', fontSize: '16px'}}>SOILD</span>}
             </div>
             <div className="d-flex status-and-price">
               <label>Price</label>

@@ -1,11 +1,12 @@
 import styled, { keyframes } from "styled-components"
-
-const colorGreen = '#00FF00'
-const colorBlack = '#0A0000'
-const colorGradientGreenBlack1 = '#0A1D00'
-const colorGradientGreen1 = '#0A2600'
-const colorGradientGreen2 = '#0A5100'
-const textShadowGreen = 'text-shadow: 2px 2px 15px rgba(0, 255, 0, 0.8);'
+import {
+  colorGreen,
+  colorBlack,
+  colorGradientGreenBlack1,
+  colorGradientGreen1,
+  colorGradientGreen2,
+  textShadowGreen,
+} from 'styleComponentGlobal/styleComponentGlobal'
 
 export const Modal = styled.div`
   width: 100vw;
