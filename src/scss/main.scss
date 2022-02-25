@@ -78,7 +78,7 @@ main{
 
     .logo-img{
       display: block;
-      margin-top: -30px;
+      margin-top: -40px;
     };
 
     .logo-title{
@@ -101,6 +101,9 @@ main{
       &:hover{
         color: $color-green;
       }
+    }
+    .active{
+      color: $color-green;
     }
     .address{
       border: 1px solid $color-green;
@@ -239,3 +242,434 @@ main{
     margin-left: 15px
   }
 };
+
+
+/* MY LAND */
+.my-land{
+  #content{
+    background-color: #040A00;
+    background-image: url('../../public/images/bg-my-land.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .content{
+    &-header{
+      .wallet-address{
+        color: white;
+        font-size: 20px;
+      }
+  
+      &-input{
+        border: 1px solid $color-green;
+        padding-left: 15px;
+        background-color: #040F00;
+        width: 400px;
+    
+        input{
+          border: none;
+          outline: none;
+          background: transparent;
+          border-radius: 0;
+          flex-grow: 1;
+          display: inline-block;
+          margin-left: 5px;
+          
+          color: #C1C1C1;
+          font-family: Helvetica_Light_Oblique;
+          font-size: 24px;
+        }
+      }
+  
+      &-hbg{
+        width: 112px;
+        height: 53px;
+        background-color: $color-green;
+        text-align: center;
+  
+        color: #002100;
+        font-family: Progress_Bold_Italic;
+        font-size: 28px;
+        line-height: 53px;
+      }
+  
+      &-box{
+        width: 134px;
+        height: 134px;
+        display: flex;
+        text-align: center;
+        border: 1px solid $color-green;
+        @include bgGradient(to bottom, $color-gradient-green-1, $color-gradient-green-2);
+  
+        p{
+          font-size: 23px;
+          color: white;
+        }
+        span{
+          font-size: 18px;
+          color: $color-green;
+        }
+      }
+  
+      &-total{
+        color: white;
+        font-size: 17px;
+        @extend %text-shadow-green;
+  
+        span{
+          color: $color-green;
+          font-size: 24px;
+        }
+      }
+  
+      &-line{
+        height: 2px;
+        width: 100%;
+        background-color: #D4FFBB;
+      }
+    }
+  
+    &-main{
+      &-box{
+        width: 172px;
+  
+        &-img{
+          background-image: url('../../public/images/land.png');
+          background-position: center;
+          width: 172px;
+          height: 172px;
+          border: 1px solid $color-green;
+          @extend %box-shadow-green;
+        }
+  
+        &-no{
+          background-color: $color-green;
+          height: 25px;
+          line-height: 25px;
+  
+          color: #040C00;
+          font-size: 23px;
+          text-align: center;
+        }
+  
+        &-reward{
+          color: $color-green;
+          span{
+            font-size: 20px;
+            color: white;
+            @extend %text-shadow-green;
+            display: inline-block;
+            text-align: right;
+          }
+        }
+  
+        &-line{
+          @include bgGradient(45deg, $color-gradient-green-1, $color-gradient-green-2);
+          border: 1px solid $color-green;
+          position: relative;
+          height: 15px;
+    
+          .line-percent{
+            background-color: $color-green;
+            width: 50%;
+            height: 100%;
+          }
+    
+          span{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-family: Helvetica_Neue;
+            color: white;
+            font-size: 15px;
+    
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+          }
+        }
+      }
+    }
+    
+    .btn-sell{
+      @include btnGradient(to right, #DD0000, #790000, #E50303, 2px 2px 15px rgba(221, 0, 0, 0.8));
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .btn-transfer, .btn-cancel, .btn-change-hero{
+      @include btnGradient(to bottom, $color-gradient-green-2, $color-gradient-green-1, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
+      margin-left: 15px;
+      padding: 5px 20px;
+    }
+  
+    .btn-hbg{
+      @include btnGradient(10deg, #00B1FF, #00FFA9, #00B1FF, 2px 2px 15px rgba(0, 177, 255, 0.8));
+      padding-left: 20px;
+      padding-right: 20px;
+      color: black;
+    }
+  
+    &-left{
+      &-img{
+        width: 463px;
+        height: 463px;
+        background-image: url('../../public/images/land-large-01.png');
+        background-position: center;
+        border: 1px solid $color-green;
+        @extend %box-shadow-green;
+      }
+  
+      &-text{
+        font-size: 27px;
+        color: $color-green;
+        text-align: center;
+        span{
+          color: white;
+          @extend %text-shadow-green;
+        }
+      }
+    }
+  
+    .btn-view-on-map{
+      @include btnGradient(to bottom, #FF5200, #450C00, #FF5200, 2px 2px 15px rgba(255, 82, 0, 0.8));
+      font-size: 18px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  
+    &-right{
+      margin-top: -15px;
+      &-no, &-minning-process-title{
+        color: white;
+        font-size: 53px;
+        @extend %text-shadow-green;
+      }
+  
+      .btn-change-hero{
+        @include btnGradient(to right, $color-gradient-green-2, #0A0E00, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
+      }
+  
+      .btn-stop-minning{
+        @include btnGradient(to right, #A20E00, #470036, #E50303, 2px 2px 15px rgba(221, 0, 0, 0.8));
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+      .btn-sell, .btn-transfer, .btn-change-hero, .btn-stop-minning{
+        font-size: 18px;
+      }
+  
+      .btn-claim{
+        @include btnGradient(to right, #0A6300, #0A0000, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
+        color: white;
+        padding: 0px 30px;
+        font-size: 30px;
+      }
+  
+      &-text{
+        color: white;
+        font-family: Helvetica_Neue;
+        font-size: 27px;
+      }
+  
+      &-minning-process{
+        &-title{
+          font-size: 44px;
+        }
+  
+        &-box{
+          background-color: rgba(0, 0, 0, 0.74);
+  
+          .reward-and-status{
+            font-size: 20px;
+            color: $color-green;
+            span{
+              color: white;
+              font-size: 35px;
+              text-shadow: -1px 0 $color-green, 0 1px $color-green, 1px 0 $color-green, 0 -1px $color-green;
+            }
+          }
+          
+          &-line{
+            @include bgGradient(45deg, $color-gradient-green-1, $color-gradient-green-2);
+            border: 1px solid $color-green;
+            position: relative;
+            height: 34px;
+      
+            .line-percent{
+              background-color: $color-green;
+              width: 50%;
+              height: 100%;
+            }
+            
+            span{
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              font-family: Helvetica_Neue;
+              color: white;
+              font-size: 20px;
+      
+              position: absolute;
+              z-index: 1;
+              top: 2px;
+            }
+          }
+  
+          &-character{
+            font-family: HemiHeadRg_BoldItalic;
+            .img{
+              width: 167px;
+              height: 167px;
+              border: 1px solid #00FFFF;
+              background-image: url('../../public/images/character.jpg');
+              background-position: center;
+              background-size: cover;
+            }
+  
+            .left{
+              font-size: 22px;
+              color: #00FFFF;
+              p{
+                margin-bottom: 0;
+              }
+              span{
+                color: white;
+              }
+            }
+  
+            .right{
+              .icon{
+                display: flex;
+                align-items: center;
+                img{
+                  display: block;
+                }
+                span{
+                  font-size: 27px;
+                  color: white;
+                  display: block;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+  
+          .content-right-minning-process-text-no-hero{
+            font-family: Helvetica_Light_Oblique;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+  
+            margin: 0 auto 30px;
+          }
+        }
+      }
+    }
+  
+    &-pagination{
+      li{
+        margin-left: 40px;
+        color: #A0A0A0;
+        font-size: 30px;
+        font-family: HemiHeadRg_BoldItalic;
+        cursor: pointer;
+  
+        &:hover{
+          color: $color-green;
+          @extend %text-shadow-green;
+        }
+      }
+    }
+  }
+  
+  .modal-change-hero{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  
+    &-frame{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      // margin: auto;
+    }
+  
+    &-box{
+      @include bgGradient(to bottom, $color-black, $color-gradient-green-black1);
+      width: 733px;
+      margin: auto;
+  
+      border: 1px solid $color-green;
+      box-shadow: 2px 2px 15px $color-green;
+    }
+  
+    &-header{
+      @extend %text-shadow-green;
+      color: white;
+      text-align: center;
+      font-size: 28px;
+      font-family: Progress_Bold_Italic;
+  
+      background-color: $color-gradient-green-2;
+      padding: 10px 0;
+    }
+  
+    &-hero{
+      margin: 0 auto;
+      &-img{
+        background-image: url('../../public/images/character-2.png');
+        background-position: center;
+        background-size: cover;
+        width: 142px;
+        height: 142px;
+        margin-bottom: 30px;
+        opacity: 0.5;
+      }
+      &-text{
+        text-align: center;
+        opacity: 0.5;
+        p{
+          margin-bottom: 0;
+          font-size: 16px;
+          font-family: 'Helvetica_Regular';
+          color: $color-green;
+        }
+        span{
+          color: white;
+        }
+      }
+  
+      &:hover{
+        .modal-change-hero-hero-img, .modal-change-hero-hero-text{
+          opacity: 1;
+        }
+      }
+    }
+  
+    .btn-apply{
+      @include btnGradient(to right, #0A6300, #0A0000, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
+      color: white;
+      padding: 0px 30px;
+      font-size: 30px;
+      margin: 0 auto 30px;
+      display: block;
+    }
+  
+    .modal-notification-text{
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      font-family: Helvetica_Regular;
+    }
+  }
+}

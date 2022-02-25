@@ -6,7 +6,7 @@ import {
   colorGradientGreen1,
   colorGradientGreen2,
   textShadowGreen,
-} from 'styleComponentGlobal/styleComponentGlobal'
+} from 'common/styleComponentGlobal'
 
 export const Modal = styled.div`
   width: 100vw;

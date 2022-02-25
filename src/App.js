@@ -1,16 +1,23 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBarMain from './components/NavBarMain';
-import BuyLandPage from './pages/BuyLandPage';
 import './scss/main.scss'
-import BuyLandContextProvider from 'contexts/BuyLandContext';
+import routes from './common/routes';
 
 function App() {
+
   return (
     <>
-      <BuyLandContextProvider>
+      <Router>
         <NavBarMain/>
-        <BuyLandPage/>
-      </BuyLandContextProvider>
+        <React.Suspense fallback={<p>Loading...</p>}>
+          <Routes>
+            {routes && routes.length > 0 &&
+              routes.map((item, index) => <Route key={index} path={item.path} element={item.element}/>)
+            }
+          </Routes> 
+        </React.Suspense>
+      </Router>
     </>
   );
 }

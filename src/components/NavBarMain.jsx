@@ -1,35 +1,39 @@
 import React from 'react';
+import { Link, useMatch } from 'react-router-dom';
 
 const NavBarMain = props => {
+  const matchBuyLand = useMatch('/')
+  const matchMyLand = useMatch('/my-land')
+
   return (
     <section id="nav">
       <div className="row">
         <div className="col-3">
-          <a href="/" className="logo">
+          <Link to="/" className="logo">
             <img src="images/logo.png" className="logo-img"/>
             <span className="logo-title">HEROland</span>
-          </a>
+          </Link>
         </div>
         <div className="col-9">
           <ul>
             <li className="nav-item">
-              <a href="">Buy land</a>
+              <Link to="/" className={matchBuyLand && 'active'}>Buy land</Link>
             </li>
             <li className="nav-item">
-              <a href="">My land</a>
+              <Link to="/my-land" className={matchMyLand && 'active'}>My land</Link>
             </li>
             <li className="nav-item">
-              <a href="">How to buy</a>
+              <Link to="/">How to buy</Link>
             </li>
             <li className="nav-item">
-              <a href="" className="address background-gradient-green">
+              <Link to="/" className="address background-gradient-green">
                 0x23ac...d1365d
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="">
+              <Link to="/">
                 <img src="images/icon-cart.png"/>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
