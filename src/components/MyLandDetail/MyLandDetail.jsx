@@ -8,10 +8,10 @@ const MyLandDetail = () => {
   return (
     <div className='my-land'>
       <section id="content" className="content">
-        <div className="">
+        {/* <div className=""> */}
           <div className="container" style={{paddingTop: '80px'}}>
             {/* <!-- CHANGE CODE IS HERE --> */}
-            <div className="row" style={{marginBottom: '100px'}}>
+            <div className="d-flex" style={{marginBottom: '100px'}}>
               <Coordinates/>
               <div className="col-6">
                 <div className="content-right">
@@ -23,7 +23,7 @@ const MyLandDetail = () => {
 
             <MyLandPagination/>
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </div>
   );

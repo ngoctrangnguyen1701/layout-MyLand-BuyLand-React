@@ -441,7 +441,7 @@ $color-red-2: #E03500;
     }
   
     .btn-view-on-map{
-      @include btnGradient(to bottom, #FF5200, #450C00, #FF5200, 2px 2px 15px rgba(255, 82, 0, 0.8));
+      @include btnGradient(bottom, #FF5200, #450C00, #FF5200, 2px 2px 15px rgba(255, 82, 0, 0.8));
       font-size: 18px;
       padding-left: 40px;
       padding-right: 40px;

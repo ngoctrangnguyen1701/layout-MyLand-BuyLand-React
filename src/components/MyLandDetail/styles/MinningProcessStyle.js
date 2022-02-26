@@ -14,6 +14,11 @@ export const Title = styled.div`
   color: white;
   font-size: 44px;
   ${textShadowGreen}
+
+  background-image: linear-gradient(to right, rgba(255, 54, 0, 0.8), rgba(255, 54, 0, 0.8));
+  background-repeat: no-repeat;
+  background-position: 0 64%;
+  background-size: 443px 15px;
 `
 export const RewardAndStatus = styled.div`
   width: 50%;
@@ -77,6 +82,9 @@ export const BtnChangeHero = styled.button`
   font-size: 18px;
   ${textShadowGreen}
 
+  &:hover{
+    opacity: 0.7
+  }
 `
 export const BtnStopMinning = styled.button`
   background-image: linear-gradient(to right, #A20E00, #470036);
@@ -88,5 +96,9 @@ export const BtnStopMinning = styled.button`
   color: white;
   font-family: Progress_Bold_Italic;
   font-size: 18px;
-  text-shadow: 2px 2px 15px rgba(221, 0, 0, 0.8))
+  text-shadow: 2px 2px 15px rgba(221, 0, 0, 0.8);
+
+  &:hover{
+    opacity: 0.7
+  }
 `

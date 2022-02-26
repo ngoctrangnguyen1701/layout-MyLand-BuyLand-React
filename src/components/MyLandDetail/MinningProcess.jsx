@@ -2,6 +2,7 @@ import React from 'react';
 // import Minning from '../../components/Minning';
 // import Minning from '../../Minning';
 import Minning from 'src/components/Minning'
+import { MyLandDetailContext } from 'src/contexts/MyLandDetailContext';
 import {
   MinningProcessFrame,
   Title,
@@ -15,6 +16,8 @@ import {
 } from './styles/MinningProcessStyle'
 
 const MinningProcess = () => {
+  const dispatch = React.useContext(MyLandDetailContext)
+
   return (
     <div className="mt-5">
       <Title>Minning process</Title>
@@ -88,7 +91,9 @@ const MinningProcess = () => {
           
           <div className="d-flex mt-4 w-100">
             <div className="w-50">
-              <BtnChangeHero>CHANGE HERO</BtnChangeHero>
+              <BtnChangeHero
+                onClick={()=>dispatch({type: 'SHOW_MODAL_CHANGE_HERO'})}
+              >CHANGE HERO</BtnChangeHero>
             </div>
             <div className="w-50">
               <BtnStopMinning>STOP MINNING</BtnStopMinning>
