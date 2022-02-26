@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BuyLandContext } from 'contexts/BuyLandContext';
+import { BuyLandContext } from 'src/contexts/BuyLandContext';
 
 const IconCart = styled.img`
   display: inline-block;

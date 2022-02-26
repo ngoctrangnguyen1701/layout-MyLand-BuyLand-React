@@ -1,5 +1,5 @@
 import React from 'react'
-import { BuyLandContext } from 'contexts/BuyLandContext';
+import { BuyLandContext } from 'src/contexts/BuyLandContext';
 import Cart from './Cart';
 import CartNoItem from './CartNoItem'
 

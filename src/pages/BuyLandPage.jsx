@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BuyLandContextProvider from 'contexts/BuyLandContext';
+import BuyLandContextProvider from 'src/contexts/BuyLandContext';
 import BuyLand from '../components/BuyLand/BuyLand'
 import BuyLandBuyModal from '../components/BuyLand/BuyLandBuyModal'
 import BuyLandSellTransferModal from '../components/BuyLand/BuyLandSellTransferModal';

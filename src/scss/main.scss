@@ -47,15 +47,15 @@ $color-red-2: #E03500;
   background-image: linear-gradient($direction, $color-gradient-1, $color-gradient-2);
 }
 
-main{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  font-family: 'font_primary';
-  #content{
-    flex-grow: 1;
-  }
-}
+// main{
+//   display: flex;
+//   flex-direction: column;
+//   height: 100vh;
+//   font-family: 'font_primary';
+//   #content{
+//     flex-grow: 1;
+//   }
+// }
 
 #nav{
   background-color: black;
@@ -66,6 +66,7 @@ main{
   
   position: absolute;
   z-index: 1;
+  top: 0;
 
   line-height: 100px;
   font-family: 'font_primary';
@@ -246,6 +247,9 @@ main{
 
 /* MY LAND */
 .my-land{
+  position: absolute;
+  top: 144px;
+  width: 100%;
   #content{
     background-color: #040A00;
     background-image: url('../../public/images/bg-my-land.png');
@@ -309,6 +313,8 @@ main{
         span{
           font-size: 18px;
           color: $color-green;
+          display: inline-block;
+          margin-left: 5px;
         }
       }
   
@@ -360,7 +366,7 @@ main{
             color: white;
             @extend %text-shadow-green;
             display: inline-block;
-            text-align: right;
+            margin-left: 5px;
           }
         }
   
@@ -394,13 +400,13 @@ main{
     }
     
     .btn-sell{
-      @include btnGradient(to right, #DD0000, #790000, #E50303, 2px 2px 15px rgba(221, 0, 0, 0.8));
+      @include btnGradient(right, #DD0000, #790000, #E50303, 2px 2px 15px rgba(221, 0, 0, 0.8));
       padding-left: 20px;
       padding-right: 20px;
     }
   
     .btn-transfer, .btn-cancel, .btn-change-hero{
-      @include btnGradient(to bottom, $color-gradient-green-2, $color-gradient-green-1, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
+      @include btnGradient(bottom, $color-gradient-green-2, $color-gradient-green-1, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
       margin-left: 15px;
       padding: 5px 20px;
     }
@@ -410,6 +416,7 @@ main{
       padding-left: 20px;
       padding-right: 20px;
       color: black;
+      background-image: linear-gradient(-45deg, #00FFA9, #00B1FF);
     }
   
     &-left{
@@ -441,7 +448,7 @@ main{
     }
   
     &-right{
-      margin-top: -15px;
+      // margin-top: -15px;
       &-no, &-minning-process-title{
         color: white;
         font-size: 53px;

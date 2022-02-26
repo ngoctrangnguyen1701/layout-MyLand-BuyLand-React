@@ -6,7 +6,7 @@ import {
   colorGradientGreen1,
   colorGradientGreen2,
   textShadowGreen,
-} from 'common/styleComponentGlobal'
+} from 'src/common/styleComponentGlobal'
 
 export const Sidebar = styled.div`
   background-color: #110300;

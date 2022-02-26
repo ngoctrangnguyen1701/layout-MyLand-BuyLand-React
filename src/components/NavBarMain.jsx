@@ -4,6 +4,7 @@ import { Link, useMatch } from 'react-router-dom';
 const NavBarMain = props => {
   const matchBuyLand = useMatch('/')
   const matchMyLand = useMatch('/my-land')
+  const matchMyLandDetail = useMatch('/my-land/detail')
 
   return (
     <section id="nav">
@@ -20,7 +21,7 @@ const NavBarMain = props => {
               <Link to="/" className={matchBuyLand && 'active'}>Buy land</Link>
             </li>
             <li className="nav-item">
-              <Link to="/my-land" className={matchMyLand && 'active'}>My land</Link>
+              <Link to="/my-land" className={(matchMyLand || matchMyLandDetail) && 'active'}>My land</Link>
             </li>
             <li className="nav-item">
               <Link to="/">How to buy</Link>

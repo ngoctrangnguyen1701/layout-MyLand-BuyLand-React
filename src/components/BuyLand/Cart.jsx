@@ -1,4 +1,4 @@
-import { BuyLandContext } from 'contexts/BuyLandContext';
+import { BuyLandContext } from 'src/contexts/BuyLandContext';
 import React from 'react';
 
 import {

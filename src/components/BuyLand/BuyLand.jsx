@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BuyLandContext } from 'contexts/BuyLandContext';
+import { BuyLandContext } from 'src/contexts/BuyLandContext';
 import Landplot from './Landplot';
 import Sidebar from './Sidebar';
 
