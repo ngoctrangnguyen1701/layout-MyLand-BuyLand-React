@@ -5,7 +5,9 @@
 a {
   text-decoration: none;
 }
-
+.row{
+  --bs-gutter-x: 1.5rem;
+}
 /* @font-face {
   font-family: 'font_primary';
   src: url("../webfonts/Progress-Bold.ttf");
