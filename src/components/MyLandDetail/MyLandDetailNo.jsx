@@ -1,10 +1,16 @@
 import React from 'react';
+import TextBorderShadow from '../TextBorderShadow';
 
 const MyLandDetailNo = () => {
   return (
     <>
       <div className="d-flex align-item-center" style={{marginTop: '-25px'}}>
-        <div className="content-right-no flex-grow-1">No. 051297</div>
+        <div className='flex-grow-1'>
+          <TextBorderShadow
+            text='No. 051297'
+            fontSize='53px'
+          />
+        </div>
         <div className="d-flex">
           <div className="content-right-sell-and-transfer my-auto">
             <button className="btn-sell">SELL</button>

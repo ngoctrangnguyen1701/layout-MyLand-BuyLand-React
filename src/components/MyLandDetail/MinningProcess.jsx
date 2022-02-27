@@ -1,7 +1,7 @@
 import React from 'react';
+// import { TextBorderShadow } from 'src/common/styleComponentGlobal';
 // import Minning from '../../components/Minning';
 // import Minning from '../../Minning';
-import Minning from 'src/components/Minning'
 import { MyLandDetailContext } from 'src/contexts/MyLandDetailContext';
 import {
   MinningProcessFrame,
@@ -13,14 +13,20 @@ import {
   Icon,
   BtnChangeHero,
   BtnStopMinning,
+  ShadowText,
 } from './styles/MinningProcessStyle'
+
+import Minning from 'src/components/Minning'
+import TextBorderShadow from 'src/components/TextBorderShadow';
 
 const MinningProcess = () => {
   const dispatch = React.useContext(MyLandDetailContext)
 
   return (
     <div className="mt-5">
-      <Title>Minning process</Title>
+      <Title>
+        <TextBorderShadow text='Minning process'/>
+      </Title>
       <MinningProcessFrame>
         <div className="d-flex">
           <RewardAndStatus>

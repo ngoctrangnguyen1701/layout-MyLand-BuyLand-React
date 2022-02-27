@@ -6,7 +6,7 @@ a {
   text-decoration: none;
 }
 .row{
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 0rem;
 }
 /* @font-face {
   font-family: 'font_primary';

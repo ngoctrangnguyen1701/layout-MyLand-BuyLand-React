@@ -11,10 +11,6 @@ export const MinningProcessFrame = styled.div`
   padding: 15px;
 `
 export const Title = styled.div`
-  color: white;
-  font-size: 44px;
-  ${textShadowGreen}
-
   background-image: linear-gradient(to right, rgba(255, 54, 0, 0.8), rgba(255, 54, 0, 0.8));
   background-repeat: no-repeat;
   background-position: 0 64%;

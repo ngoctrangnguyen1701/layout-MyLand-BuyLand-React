@@ -1,3 +1,5 @@
+import styled from "styled-components"
+
 export const colorGreen = '#00FF00'
 export const colorGreen3 = '#072800'
 export const colorBlack = '#0A0000'

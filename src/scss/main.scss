@@ -448,13 +448,6 @@ $color-red-2: #E03500;
     }
   
     &-right{
-      // margin-top: -15px;
-      &-no, &-minning-process-title{
-        color: white;
-        font-size: 53px;
-        @extend %text-shadow-green;
-      }
-  
       .btn-change-hero{
         @include btnGradient(to right, $color-gradient-green-2, #0A0E00, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
       }
@@ -483,10 +476,6 @@ $color-red-2: #E03500;
       }
   
       &-minning-process{
-        &-title{
-          font-size: 44px;
-        }
-  
         &-box{
           background-color: rgba(0, 0, 0, 0.74);
   
