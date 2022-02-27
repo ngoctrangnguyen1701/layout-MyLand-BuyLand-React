@@ -10,27 +10,27 @@ import {
 
 export const Modal = styled.div`
   width: 100%;
-  height: calc(100% + 144px); //144 là height của thanh navbar phía trên
+  // height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
 
-  position: absolute;
+  // position: absolute;
+  position: fixed;
   top: 0;
   z-index: -1000;
   opacity: 0;
   transition: .5s;
+
   ${props => props.show && `
     z-index: 1000;
     opacity: 1;
   `}
 `
-
 export const ModalFrame = styled.div`
   background-image: linear-gradient(to bottom, ${colorBlack}, ${colorGradientGreenBlack1});
-  width: 620px;
+  width: 733px;
   margin: auto;
-  padding-bottom: 30px;
-
   border: 1px solid ${colorGreen};
   box-shadow: 2px 2px 15px ${colorGreen};
   opacity: 0;
@@ -39,7 +39,6 @@ export const ModalFrame = styled.div`
 
   ${props => props.show && `transform: translateY(0); opacity: 1;`}
 `
-
 export const ModalHeader = styled.div`
   ${textShadowGreen}
   color: white;
@@ -48,100 +47,73 @@ export const ModalHeader = styled.div`
   font-family: Progress_Bold_Italic;
 
   background-color: ${colorGradientGreen2};
-  padding: 10px 0;
+  // padding: 10px 0;
+  padding: 5px 0;
 `
-
 export const ModalContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
   color: white;
   text-align: center;
-  p{
-    font-family: Helvetica_Neue;
-    font-size: 28px;
-  }
-  span{
-    font-family: font_primary;
-    color: ${colorGreen};
-  }
+
+  height: 500px;
+  overflow-y: auto;
+  margin-top: 15px;
 `
-export const Input = styled.input`
-  outline: none;
-  height: 50px;
-  border: 1px solid ${colorGreen};
-  border-radius: 0px;
-  background: none;
-
-  font-family: Helvetica_Light_Oblique;
-  font-size: 24px;
-  line-height: 50px;
-  color: #C1C1C1;
-
-  &:focus{
-    // border: none;
-    box-shadow: none;
-    color: white;
+export const HeroItem = styled.div`
+  // margin: 15px auto 24px;
+  margin: 0 auto 24px;
+  opacity: 0.5;
+  transition: .3s;
+    &:hover{
+    opacity: 1;
+    transition: .3s;
   }
 `
-
-export const HBG = styled.div`
-  background-color: ${colorGreen};
-  padding: 0 20px;
-  height: 50px;
-
-  color: #002100;
-  line-height: 50px;
-  font-family: Progress_Bold_Italic;
-  font-size: 28px;
-`
-
-export const ModalImg = styled.div`
-  background-image: url('/images/land.png');
+export const HeroImg = styled.div`
+  background-image: url('/images/character-2.png');
   background-position: center;
-  width: 130px;
-  height: 130px;
-  border: 1px solid ${colorGreen};
+  background-size: cover;
+  width: 142px;
+  height: 142px;
+  margin-bottom: 15px;
+  // opacity: 0.5;
 `
-
-export const NoAndReward = styled.div`
-  display: flex;
-  font-size: 25px;
+export const HeroId = styled.div`
+  // font-family: Progress_Bold_Italic;
+  font-size: 20px;
   color: white;
-  font-family: font_primary;
-
-  span{
+`
+export const HeroText = styled.div`
+  // opacity: 0.5;
+  p{
+    margin-bottom: 0;
+    font-size: 16px;
+    font-family: 'Helvetica_Regular';
     color: ${colorGreen};
-    display: inline-block;
-    margin-left: 20px;
   }
-`
-
-export const Progress = styled.div`
-  background-image: linear-gradient(45deg, ${colorGradientGreen1}, ${colorGradientGreen2});
-  border: 1px solid ${colorGreen};
-  position: relative;
-  height: 15px;
-
-  .line-percent{
-    background-color: ${colorGreen};
-    width: 50%;
-    height: 100%;
-  }
-
   span{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-family: Helvetica_Neue;
     color: white;
-    font-size: 15px;
-
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 0;
+    display: inline-block;
+    margin-left: 5px;
   }
 `
+export const BtnApply = styled.button`
+  background-image: linear-gradient(to right, #0A6300, #0A0000);
+  border: 1px solid ${colorGreen};
+  padding: 5px 30px;
+  margin: 30px auto 15px;
+  display: block;
 
+  color: white;
+  font-family: Progress_Bold_Italic;
+  font-size: 30px;
+${textShadowGreen}
+`
+
+
+//-----------------------------------------------
 const borderRun = keyframes`
   100%{transform: rotate(360deg);}
 `

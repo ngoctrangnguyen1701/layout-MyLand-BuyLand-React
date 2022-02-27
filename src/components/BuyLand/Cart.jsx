@@ -79,7 +79,9 @@ const Cart = props => {
             <small className='text-white'>$120 USD</small>
           </div>
         </Total>
-        <BtnBuy>BUY</BtnBuy>
+        <BtnBuy
+          onClick={()=>dispatch({type: 'SHOW_MODAL_BUY'})}
+        >BUY</BtnBuy>
       </div>
       </SidebarContent>
     </Sidebar>

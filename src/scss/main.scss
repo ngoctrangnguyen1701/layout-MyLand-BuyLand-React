@@ -118,7 +118,8 @@ $color-red-2: #E03500;
 }
 
 #content-buy-land{
-  height: calc(100vh - 144px);
+  // height: calc(100vh - 144px);
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 144px;

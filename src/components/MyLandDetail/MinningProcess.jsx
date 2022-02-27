@@ -20,7 +20,7 @@ import Minning from 'src/components/Minning'
 import TextBorderShadow from 'src/components/TextBorderShadow';
 
 const MinningProcess = () => {
-  const dispatch = React.useContext(MyLandDetailContext)
+  const dispatch = React.useContext(MyLandDetailContext).dispatch
 
   return (
     <div className="mt-5">
@@ -30,16 +30,10 @@ const MinningProcess = () => {
       <MinningProcessFrame>
         <div className="d-flex">
           <RewardAndStatus>
-            <p>
-              Reward:
-              <span>534 HBG</span>
-            </p>
+            <p>Reward:<span>534 HBG</span></p>
           </RewardAndStatus>
           <RewardAndStatus className="text-right">
-            <p>
-              Status:
-              <span>Minning</span>
-            </p>
+            <p>Status:<span>Minning</span></p>
           </RewardAndStatus>
         </div>
 
@@ -56,26 +50,11 @@ const MinningProcess = () => {
             <div className="d-flex align-item-center">
               <LeftSide>
                 <p style={{fontSize: '25px'}}>#12345614</p>
-                <p>
-                  Minning:
-                  <span> 50</span>
-                </p>
-                <p>
-                  Level:
-                  <span> 4</span>
-                </p>
-                <p>
-                  Rarity:
-                  <span> 1</span>
-                </p>
-                <p>
-                  class:
-                  <span> Warriorarrior</span>
-                </p>
-                <p>
-                  Skin:
-                  <span> Original</span>
-                </p>
+                <p>Minning:<span> 50</span></p>
+                <p>Level:<span> 4</span></p>
+                <p>Rarity:<span> 1</span></p>
+                <p>class:<span> Warriorarrior</span></p>
+                <p>Skin:<span> Original</span></p>
               </LeftSide>
 
               <div className="ms-5">
