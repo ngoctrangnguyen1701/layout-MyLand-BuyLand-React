@@ -10,7 +10,6 @@ import {
 } from './styles/StopMinningModalStyle'
 
 const StopMinningModal = props => {
-  console.log('render StopMinningModal');
   const dispatch = React.useContext(MyLandDetailContext).dispatch
   const showModalStopMinning = React.useContext(MyLandDetailContext).state.showModalStopMinning
 
@@ -18,7 +17,7 @@ const StopMinningModal = props => {
   React.useEffect(()=>{
     //chặn thanh cuộn dọc của thẻ <body> khi bật modal change hero
     const bodyElement = document.getElementsByTagName('body')[0]
-    console.log(bodyElement);
+    // console.log(bodyElement);
     if(showModalStopMinning){
       bodyElement.style.overflow = 'hidden'
       bodyElement.style.height = '100%'

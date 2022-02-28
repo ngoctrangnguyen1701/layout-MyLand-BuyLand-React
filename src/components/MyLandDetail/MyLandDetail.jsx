@@ -16,8 +16,8 @@ const Title = styled.div`
 `
 
 const MyLandDetail = () => {
-  // const isHasHero = true
-  const isHasHero = false
+  const isHasHero = true
+  // const isHasHero = false
 
   return (
     <div className='my-land'>

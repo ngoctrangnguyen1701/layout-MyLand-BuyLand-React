@@ -467,20 +467,5 @@ $color-red-2: #E03500;
         font-size: 27px;
       }
     }
-  
-    &-pagination{
-      li{
-        margin-left: 40px;
-        color: #A0A0A0;
-        font-size: 30px;
-        font-family: HemiHeadRg_BoldItalic;
-        cursor: pointer;
-  
-        &:hover{
-          color: $color-green;
-          @extend %text-shadow-green;
-        }
-      }
-    }
   }
 }

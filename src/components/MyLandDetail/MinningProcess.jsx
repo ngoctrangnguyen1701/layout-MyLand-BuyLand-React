@@ -13,7 +13,9 @@ import {
   TextNoHero,
   BtnChooseHero,
 } from './styles/MinningProcessStyle'
+import { colorGradientGreen2, colorGreen, textShadowGreen } from 'src/common/styleComponentGlobal';
 
+import BtnEffectBorderRun from '../BtnEffectBorderRun';
 import Minning from 'src/components/Minning'
 import TextBorderShadow from 'src/components/TextBorderShadow';
 
@@ -74,15 +76,43 @@ const MinningProcess = ({isHasHero}) => {
             </div>
             
             <div className="d-flex mt-4 w-100">
-              <div className="w-50">
-                <BtnChangeHero
+              <div className="w-50 d-flex justify-content-center">
+                {/* <BtnChangeHero
                   onClick={()=>dispatch({type: 'SHOW_MODAL_CHANGE_HERO'})}
-                >CHANGE HERO</BtnChangeHero>
+                >CHANGE HERO</BtnChangeHero> */}
+                <BtnEffectBorderRun
+                  width='146px'
+                  height='39px'
+                  backgroundImage={`linear-gradient(to bottom, ${colorGradientGreen2}, #0A0E00)`}
+                  border={`1px solid ${colorGreen};`}
+                  fontSize='18px'
+                  textShadow='2px 2px 15px rgba(0, 255, 0, 0.8)'
+                  backgroundImageTextHover={`linear-gradient(to bottom, ${colorGradientGreen2}, #0A0E00)`}
+                  widthCricle={`${146 * 1.2}px`}
+                  positionCircleLeft='-15px'
+                  positionCircleTop='-70px'
+                  text='CHANGE HERO'
+                  handleClick={()=>dispatch({type: 'SHOW_MODAL_CHANGE_HERO'})}
+                />
               </div>
-              <div className="w-50">
-                <BtnStopMinning
+              <div className="w-50 d-flex justify-content-center">
+                {/* <BtnStopMinning
                   onClick={()=>dispatch({type: 'SHOW_MODAL_STOP_MINNING'})}
-                >STOP MINNING</BtnStopMinning>
+                >STOP MINNING</BtnStopMinning> */}
+                <BtnEffectBorderRun
+                  width='146px'
+                  height='39px'
+                  backgroundImage='linear-gradient(to right, #A20E00, #470036)'
+                  border='1px solid #E50303'
+                  fontSize='18px'
+                  textShadow='2px 2px 15px rgba(221, 0, 0, 0.8)'
+                  backgroundImageTextHover='linear-gradient(to right, #A20E00, #470036)'
+                  widthCricle={`${146 * 1.2}px`}
+                  positionCircleLeft='-15px'
+                  positionCircleTop='-70px'
+                  text='STOP MINNING'
+                  handleClick={()=>dispatch({type: 'SHOW_MODAL_STOP_MINNING'})}
+                />
               </div>
             </div>
           </CharacterBox>

@@ -177,11 +177,14 @@ export const ModalBtn = styled.button`
     height: calc(130px * 1.2);
     border-radius: 50%;
 
-    background-color: ${colorGreen};
+    // background-color: ${colorGreen};
     background-repeat: no-repeat;
     background-size: 50% 50%, 50% 50%;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: linear-gradient(white, white), linear-gradient(${colorGreen}, ${colorGreen});
+    // background-image: linear-gradient(white, white), linear-gradient(${colorGreen}, ${colorGreen});
+    background-image: linear-gradient(white, white), linear-gradient(${colorGreen}, ${colorGreen}),
+                      linear-gradient(white, white), linear-gradient(${colorGreen}, ${colorGreen})
+    ;
 
     position: absolute;
     left: -13px;
