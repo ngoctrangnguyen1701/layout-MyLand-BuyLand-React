@@ -11,7 +11,7 @@ import {
 
 const CartNoItem = props => {
   return (
-    <Sidebar className="col-3 ps-0">
+    <Sidebar className="col-lg-3 ps=lg-0">
       <SidebarHeader>
         <span>Cart:</span>
         <SidebarNumBasket>0</SidebarNumBasket>

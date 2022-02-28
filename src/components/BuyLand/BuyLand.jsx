@@ -28,8 +28,8 @@ const BuyLand = props => {
 
   return (
     <section id="content-buy-land">
-      {/* <div className="d-flex h-100">
-        <div className="col-9 main position-relative d-flex">
+      <div className="d-lg-flex h-100">
+        <div className="col-12 col-lg-9 main d-lg-flex">
           {typeLandplot ? <Landplot/> : (
             <>
               <Landom
@@ -64,7 +64,7 @@ const BuyLand = props => {
           )}
         </div>
         <Sidebar/>
-      </div> */}
+      </div>
     </section>
   );
 };

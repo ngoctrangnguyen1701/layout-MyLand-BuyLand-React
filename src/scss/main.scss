@@ -60,7 +60,7 @@ $color-red-2: #E03500;
 #nav{
   background-color: black;
   height: 144px;
-  padding: 15px 50px 0 40px;
+  padding: 15px 30px 0 40px;
   box-shadow: 0px 10px 100px rgba(0, 255, 0, 0.5);
   width: 100%;
   
@@ -80,11 +80,13 @@ $color-red-2: #E03500;
     .logo-img{
       display: block;
       margin-top: -40px;
+      margin-left: -60px;
     };
 
     .logo-title{
       color: $color-green;
       font-size: 47px;
+      margin-left: -30px;
     };
   }
   
@@ -122,14 +124,19 @@ $color-red-2: #E03500;
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 144px;
+  // top: 144px;
+  @media (min-width: 767px) {
+    top: 144px;
+  }
 
   .main{
     background-image: url('../../public/images/bg-main.jpg');
     height: 100%;
     // width: 100%;
+    @media (min-width: 767px) {
+      position: absolute;
+    }
 
-    position: absolute;
     .land{
       &-left{
         background-color: rgba(0, 0, 0, 0.7);
@@ -153,6 +160,10 @@ $color-red-2: #E03500;
           position: absolute;
           top: 100%;
           left: 50%;
+          @media (max-width: 768px) {
+            display: none;
+          }
+
         }
   
         &-img{

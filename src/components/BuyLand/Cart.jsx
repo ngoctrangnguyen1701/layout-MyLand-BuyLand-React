@@ -21,7 +21,7 @@ const Cart = props => {
 
   return (
     <Sidebar
-      className="col-3 ps-0" 
+      className="col-lg-3 ps-lg-0" 
       backgroundColor='black'
     >
       <SidebarHeader>
