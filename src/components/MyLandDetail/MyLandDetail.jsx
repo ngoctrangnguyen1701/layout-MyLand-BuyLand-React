@@ -16,6 +16,9 @@ const Title = styled.div`
 `
 
 const MyLandDetail = () => {
+  // const isHasHero = true
+  const isHasHero = false
+
   return (
     <div className='my-land'>
       <section id="content" className="content">
@@ -31,8 +34,8 @@ const MyLandDetail = () => {
             <Coordinates/>
             <div className="col-6">
               <div className="content-right">
-                <MyLandDetailNo/>
-                <MinningProcess/>
+                <MyLandDetailNo isHasHero={isHasHero}/>
+                <MinningProcess isHasHero={isHasHero}/>
               </div>
             </div>
           </div>

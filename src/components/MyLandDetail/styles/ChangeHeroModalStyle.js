@@ -134,7 +134,7 @@ export const BtnApply = styled.button`
   color: white;
   font-family: Progress_Bold_Italic;
   font-size: 30px;
-${textShadowGreen}
+  ${textShadowGreen}
 `
 
 

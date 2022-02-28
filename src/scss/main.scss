@@ -449,15 +449,6 @@ $color-red-2: #E03500;
     }
   
     &-right{
-      // .btn-change-hero{
-      //   @include btnGradient(to right, $color-gradient-green-2, #0A0E00, $color-green, 2px 2px 15px rgba(0, 255, 0, 0.8));
-      // }
-  
-      // .btn-stop-minning{
-      //   @include btnGradient(to right, #A20E00, #470036, #E50303, 2px 2px 15px rgba(221, 0, 0, 0.8));
-      //   padding-left: 20px;
-      //   padding-right: 20px;
-      // }
   
       .btn-sell, .btn-transfer, .btn-change-hero, .btn-stop-minning{
         font-size: 18px;
@@ -474,97 +465,6 @@ $color-red-2: #E03500;
         color: white;
         font-family: Helvetica_Neue;
         font-size: 27px;
-      }
-  
-      &-minning-process{
-        &-box{
-          background-color: rgba(0, 0, 0, 0.74);
-  
-          // .reward-and-status{
-          //   font-size: 20px;
-          //   color: $color-green;
-          //   span{
-          //     color: white;
-          //     font-size: 35px;
-          //     text-shadow: -1px 0 $color-green, 0 1px $color-green, 1px 0 $color-green, 0 -1px $color-green;
-          //   }
-          // }
-          
-          // &-line{
-          //   @include bgGradient(45deg, $color-gradient-green-1, $color-gradient-green-2);
-          //   border: 1px solid $color-green;
-          //   position: relative;
-          //   height: 34px;
-      
-          //   .line-percent{
-          //     background-color: $color-green;
-          //     width: 50%;
-          //     height: 100%;
-          //   }
-            
-          //   span{
-          //     display: inline-block;
-          //     width: 100%;
-          //     height: 100%;
-          //     text-align: center;
-          //     font-family: Helvetica_Neue;
-          //     color: white;
-          //     font-size: 20px;
-      
-          //     position: absolute;
-          //     z-index: 1;
-          //     top: 2px;
-          //   }
-          // }
-  
-          // &-character{
-          //   font-family: HemiHeadRg_BoldItalic;
-          //   .img{
-          //     width: 167px;
-          //     height: 167px;
-          //     border: 1px solid #00FFFF;
-          //     background-image: url('../../public/images/character.jpg');
-          //     background-position: center;
-          //     background-size: cover;
-          //   }
-  
-          //   .left{
-          //     font-size: 22px;
-          //     color: #00FFFF;
-          //     p{
-          //       margin-bottom: 0;
-          //     }
-          //     span{
-          //       color: white;
-          //     }
-          //   }
-  
-          //   .right{
-          //     .icon{
-          //       display: flex;
-          //       align-items: center;
-          //       img{
-          //         display: block;
-          //       }
-          //       span{
-          //         font-size: 27px;
-          //         color: white;
-          //         display: block;
-          //         margin-left: 10px;
-          //       }
-          //     }
-          //   }
-          // }
-  
-          .content-right-minning-process-text-no-hero{
-            font-family: Helvetica_Light_Oblique;
-            font-size: 24px;
-            color: white;
-            text-align: center;
-  
-            margin: 0 auto 30px;
-          }
-        }
       }
     }
   

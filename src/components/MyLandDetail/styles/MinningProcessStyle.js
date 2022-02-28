@@ -98,3 +98,23 @@ export const BtnStopMinning = styled.button`
     opacity: 0.7
   }
 `
+export const TextNoHero = styled.div`
+  font-family: Helvetica_Light_Oblique;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+
+  margin: 70px auto;
+`
+export const BtnChooseHero = styled.button`
+  background-image: linear-gradient(to right, #0A6300, #0A0000);
+  border: 1px solid ${colorGreen};
+  padding: 0px 30px;
+  display: block;
+  margin: 0 auto 15px;
+
+  color: white;
+  font-family: Progress_Bold_Italic;
+  font-size: 30px;
+  ${textShadowGreen}
+`
