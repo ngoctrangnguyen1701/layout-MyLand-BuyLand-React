@@ -3,13 +3,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBarMain from './components/NavBarMain';
 import './scss/main.scss'
 import routes from './common/routes';
+import useViewport from './common/useViewport';
+import NavBarMainMobile from './components/NavBarMainMobile';
 
 function App() {
+  const viewPort = useViewport()
+  const isMobile = viewPort.width <= 1024
+  // console.log({isMobile});
 
   return (
     <>
       <Router>
-        <NavBarMain/>
+        {isMobile ? <NavBarMainMobile/> : <NavBarMain/>}
+        
         <React.Suspense fallback={<p>Loading...</p>}>
           <Routes>
             {routes && routes.length > 0 &&

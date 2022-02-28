@@ -1,15 +1,28 @@
 import React from 'react';
 import { Link, useMatch } from 'react-router-dom';
+import styled from 'styled-components';
 
-const NavBarMain = props => {
+const NavBar = styled.div`
+  height: 144px;
+  background: black;
+  padding: '15px 10px 0 10px';
+`
+const LogoImg = styled.div`
+  width: 20%;
+`
+
+const NavBarMainMobile = props => {
   const matchBuyLand = useMatch('/')
   const matchMyLand = useMatch('/my-land')
   const matchMyLandDetail = useMatch('/my-land/detail')
 
   return (
-    <section id="nav">
+    <NavBar>
       <div className="row">
-        <div className="col-lg-3">
+        <LogoImg>
+          <img src="images/logo.png"/>
+        </LogoImg>
+        {/* <div className="col-lg-3">
           <Link to="/" className="logo">
             <img src="images/logo.png" className="logo-img"/>
             <span className="logo-title">HEROland</span>
@@ -37,10 +50,10 @@ const NavBarMain = props => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
-    </section>
+    </NavBar>
   );
 };
 
-export default React.memo(NavBarMain);
+export default React.memo(NavBarMainMobile);
