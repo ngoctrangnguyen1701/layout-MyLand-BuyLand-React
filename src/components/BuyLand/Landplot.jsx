@@ -41,13 +41,28 @@ const Landplot = props => {
             </div>
             {/* CHANGE LANDPLOT IS HERE  */}
             {typeLandplot === 'addToCart' && 
-              <button
-                className="btn-add-to-cart background-gradient-green-2"
-                onClick={()=>dispatch({type: 'ADD_TO_CART'})}
-              >
-                <IconCart src="images/icon-cart-green.png"/>
-                ADD TO CART
-              </button>
+              // <button
+              //   className="btn-add-to-cart background-gradient-green-2"
+              //   onClick={()=>dispatch({type: 'ADD_TO_CART'})}
+              // >
+              //   <IconCart src="images/icon-cart-green.png"/>
+              //   ADD TO CART
+              // </button>
+              <BtnEffectBorderRun
+                width='130px'
+                height='30px'
+                backgroundImage='linear-gradient(to bottom, #0A2600, #0A5100)'
+                border='1px solid #00FF00'
+                fontSize='12px'
+                textShadow='2px 2px 15px rgba(0, 255, 0, 0.8)'
+                backgroundImageTextHover='linear-gradient(to bottom, #0A2600, #0A5100)'
+                widthCricle={`${130 * 1.2}px`}
+                positionCircleLeft='-15px'
+                positionCircleTop='-63px'
+                text='ADD TO CART'
+                handleClick={()=>dispatch({type: 'ADD_TO_CART'})}
+                isBtnAddToCart={true}
+              />
             }
 
             {typeLandplot === 'soild' && 
@@ -111,13 +126,28 @@ const Landplot = props => {
             <span className="land-id-large">#51g</span>
           </div>
           <div className="col-6 d-flex justify-content-end">
-            <button
+            {/* <button
               className="btn-add-to-cart background-gradient-green-2"
               onClick={()=>dispatch({type: 'ADD_TO_CART'})}
             >
               <IconCart src="images/icon-cart-green.png"/>
               ADD TO CART
-            </button>
+            </button> */}
+            <BtnEffectBorderRun
+              width='130px'
+              height='30px'
+              backgroundImage='linear-gradient(to bottom, #0A2600, #0A5100)'
+              border='1px solid #00FF00'
+              fontSize='12px'
+              textShadow='2px 2px 15px rgba(0, 255, 0, 0.8)'
+              backgroundImageTextHover='linear-gradient(to bottom, #0A2600, #0A5100)'
+              widthCricle={`${130 * 1.2}px`}
+              positionCircleLeft='-15px'
+              positionCircleTop='-63px'
+              text='ADD TO CART'
+              handleClick={()=>dispatch({type: 'ADD_TO_CART'})}
+              isBtnAddToCart={true}
+            />
           </div>
         </div>  
         <div className="land-right-bottom">

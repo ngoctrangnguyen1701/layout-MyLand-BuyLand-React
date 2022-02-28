@@ -75,6 +75,12 @@ const Btn = styled.button`
     }
   }
 `
+const IconCart = styled.img`
+  display: inline-block;
+  width: 15%;
+  margin-right: 5px;
+  margin-top: -5px;
+`
 
 const BtnEffectBorderRun = (props) => {
   const {
@@ -91,7 +97,8 @@ const BtnEffectBorderRun = (props) => {
     positionCircleLeft,
     positionCircleTop,
     text, 
-    handleClick
+    handleClick,
+    isBtnAddToCart,
   } = props
 
   return (
@@ -112,6 +119,7 @@ const BtnEffectBorderRun = (props) => {
     >
       <div className="circle-white"></div>
       <div className="text">
+        {isBtnAddToCart && <IconCart src="images/icon-cart-green.png"/>}
         {text}
       </div>
     </Btn>
