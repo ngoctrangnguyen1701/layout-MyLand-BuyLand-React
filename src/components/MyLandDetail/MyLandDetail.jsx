@@ -6,7 +6,6 @@ import Coordinates from './Coordinates';
 import MyLandDetailNo from './MyLandDetailNo';
 import MinningProcess from './MinningProcess';
 import TextBorderShadow from '../TextBorderShadow';
-import ChangeHeroModal from './ChangeHeroModal';
 
 const Title = styled.div`
   background-image: linear-gradient(to right, rgba(255, 54, 0, 0.8), rgba(255, 54, 0, 0.8));
@@ -37,11 +36,9 @@ const MyLandDetail = () => {
               </div>
             </div>
           </div>
-
           <MyLandPagination/>
         </div>
       </section>
-      {/* <ChangeHeroModal/> */}
     </div>
   );
 };

@@ -76,7 +76,6 @@ export const Input = styled.input`
   color: #C1C1C1;
 
   &:focus{
-    // border: none;
     box-shadow: none;
     color: white;
   }

@@ -1,7 +1,4 @@
 import React from 'react';
-// import { TextBorderShadow } from 'src/common/styleComponentGlobal';
-// import Minning from '../../components/Minning';
-// import Minning from '../../Minning';
 import { MyLandDetailContext } from 'src/contexts/MyLandDetailContext';
 import {
   MinningProcessFrame,
@@ -81,7 +78,9 @@ const MinningProcess = () => {
               >CHANGE HERO</BtnChangeHero>
             </div>
             <div className="w-50">
-              <BtnStopMinning>STOP MINNING</BtnStopMinning>
+              <BtnStopMinning
+                onClick={()=>dispatch({type: 'SHOW_MODAL_STOP_MINNING'})}
+              >STOP MINNING</BtnStopMinning>
             </div>
           </div>
         </CharacterBox>

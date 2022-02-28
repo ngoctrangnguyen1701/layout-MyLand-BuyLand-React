@@ -4,6 +4,7 @@ export const MyLandDetailContext = React.createContext()
 
 const initialState = {
   showModalChangeHero: false,
+  showModalStopMinning: false,
 }
 
 const reducer = (state, action) => {
@@ -19,6 +20,18 @@ const reducer = (state, action) => {
       return {
         ...state,
         showModalChangeHero: false
+      }
+
+    case 'SHOW_MODAL_STOP_MINNING':
+      return {
+        ...state,
+        showModalStopMinning: true
+      }
+
+    case 'EXIT_MODAL_STOP_MINNING':
+      return {
+        ...state,
+        showModalStopMinning: false
       }
 
     default:

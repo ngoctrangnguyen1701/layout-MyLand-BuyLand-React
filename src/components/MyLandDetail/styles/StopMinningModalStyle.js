@@ -10,7 +10,7 @@ import {
 
 export const Modal = styled.div`
   width: 100%;
-  // height: 100%;
+  // height: calc(100% + 144px); //144 là height của thanh navbar phía trên
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
@@ -21,19 +21,18 @@ export const Modal = styled.div`
   z-index: -1000;
   opacity: 0;
   transition: .5s;
-
   ${props => props.show && `
     z-index: 1000;
     opacity: 1;
   `}
 `
+
 export const ModalFrame = styled.div`
   background-image: linear-gradient(to bottom, ${colorBlack}, ${colorGradientGreenBlack1});
-  // width: 733px;
-  width: 50%;
-  max-width: 733px;
-  min-width: 550px;
+  width: 620px;
   margin: auto;
+  padding-bottom: 30px;
+
   border: 1px solid ${colorGreen};
   box-shadow: 2px 2px 15px ${colorGreen};
   opacity: 0;
@@ -42,6 +41,7 @@ export const ModalFrame = styled.div`
 
   ${props => props.show && `transform: translateY(0); opacity: 1;`}
 `
+
 export const ModalHeader = styled.div`
   ${textShadowGreen}
   color: white;
@@ -50,95 +50,22 @@ export const ModalHeader = styled.div`
   font-family: Progress_Bold_Italic;
 
   background-color: ${colorGradientGreen2};
-  padding: 5px 0;
+  padding: 10px 0;
 `
-export const ModalContent = styled.div`
-  display: flex;
-  flex-wrap: wrap;
 
+export const ModalContent = styled.div`
   color: white;
   text-align: center;
-
-  height: 500px;
-  overflow-y: auto;
-  margin-top: 15px;
-
-  //CHANGE STYLE SCROLLBAR
-  /* width */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: black;
-    border-radius: 5px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #B2F786;
-    border-radius: 5px;
-
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #82b85f;
-  }
-`
-export const HeroItem = styled.div`
-  margin: 0 auto 24px;
-  opacity: 0.5;
-  transition: .3s;
-    &:hover{
-    opacity: 1;
-    transition: .3s;
-  }
-`
-export const HeroImg = styled.div`
-  background-image: url('/images/character-2.png');
-  background-position: center;
-  background-size: cover;
-  width: 142px;
-  height: 142px;
-  margin-bottom: 15px;
-  // opacity: 0.5;
-`
-export const HeroId = styled.div`
-  // font-family: Progress_Bold_Italic;
-  font-size: 20px;
-  color: white;
-`
-export const HeroText = styled.div`
-  // opacity: 0.5;
   p{
-    margin-bottom: 0;
-    font-size: 16px;
-    font-family: 'Helvetica_Regular';
-    color: ${colorGreen};
+    font-family: Helvetica_Neue;
+    font-size: 28px;
   }
   span{
-    color: white;
-    display: inline-block;
-    margin-left: 5px;
+    font-family: font_primary;
+    color: ${colorGreen};
   }
 `
-export const BtnApply = styled.button`
-  background-image: linear-gradient(to right, #0A6300, #0A0000);
-  border: 1px solid ${colorGreen};
-  padding: 0px 30px;
-  margin: 30px auto 15px;
-  display: block;
 
-  color: white;
-  font-family: Progress_Bold_Italic;
-  font-size: 30px;
-${textShadowGreen}
-`
-
-
-//-----------------------------------------------
 const borderRun = keyframes`
   100%{transform: rotate(360deg);}
 `
