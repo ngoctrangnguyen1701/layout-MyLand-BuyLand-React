@@ -42,13 +42,24 @@ export const IconCart = styled.div`
   }
 `
 export const MenuCollapse = styled.div`
-  display: ${props => props.show ? 'flex' : 'none'};
+  // display: ${props => props.show ? 'flex' : 'none'};
   flex-direction: column;
   background-color: black;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 1000;
+
+  opacity: 0;
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: .3s;
+
+  ${props => props.show && `
+    transform: scaleY(1);
+    opacity: 1;
+    transition: .3s;
+  `}
 `
 export const MenuItem = styled.div`
   padding: 15px 0;

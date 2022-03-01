@@ -5,6 +5,7 @@ import './scss/main.scss'
 import routes from './common/routes';
 import useViewport from 'src/common/useViewport';
 import NavBarMainMobile from './components/NavBarMainMobile';
+import NavBarMobileContextProvider from 'src/contexts/NavBarMobileContext'
 
 function App() {
   const viewPort = useViewport()
@@ -12,7 +13,7 @@ function App() {
   // console.log({isMobile});
 
   return (
-    <>
+    <NavBarMobileContextProvider>
       <Router>
         {isMobile ? <NavBarMainMobile/> : <NavBarMain/>}
         
@@ -24,7 +25,7 @@ function App() {
           </Routes> 
         </React.Suspense>
       </Router>
-    </>
+    </NavBarMobileContextProvider>
   );
 }
 

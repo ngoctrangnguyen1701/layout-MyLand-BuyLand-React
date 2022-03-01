@@ -10,13 +10,15 @@ import {
   MenuItem,
   Address,
 } from 'src/components/styles/NavBarMainMobileStyle'
+import { NavBarMobileContext } from 'src/contexts/NavBarMobileContext';
 
 const NavBarMainMobile = props => {
   const matchBuyLand = useMatch('/')
   const matchMyLand = useMatch('/my-land')
   const matchMyLandDetail = useMatch('/my-land/detail')
+  const {showMenuCollapse, setShowMenuCollapse} = React.useContext(NavBarMobileContext)
+  console.log(showMenuCollapse);
 
-  const [showMenuCollapse, setShowMenuCollapse] = React.useState(false)
 
   React.useEffect(()=>{
     //chặn thanh cuộn dọc của thẻ <body> khi bật modal change hero
@@ -30,6 +32,7 @@ const NavBarMainMobile = props => {
       bodyElement.style.height = 'auto'
     }
   }, [showMenuCollapse])
+
 
   return (
     <>
