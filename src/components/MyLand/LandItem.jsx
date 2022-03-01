@@ -1,6 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import BtnEffectBorderRun from '../BtnEffectBorderRun';
+
+const Frame = styled.div`
+  width: 20% ;
+  display: flex;
+  margin: 40px 0;
+
+  @media(max-width: 1023px){
+    width: 35%;
+    margin: 30px 0;
+  }
+  @media(max-width: 767px){
+    width: 100%;
+    margin: 15px 0;
+  }
+`
 
 const LandItem = (props) => {
   const {
@@ -10,7 +26,8 @@ const LandItem = (props) => {
   } = props
 
   return (
-    <div className="d-flex my-5 ps-0" style={{width: '20%'}}>
+    // <div className="d-flex my-5 ps-0" style={{width: '20%'}}>
+    <Frame>
       <div className="content-main-box mx-auto">
         <Link to='/my-land/detail'>
           <div className="content-main-box-img"></div>
@@ -90,7 +107,7 @@ const LandItem = (props) => {
           )}
         </div>
       </div>
-    </div>
+    </Frame>
   );
 };
 

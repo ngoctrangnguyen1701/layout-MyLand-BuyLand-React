@@ -18,6 +18,19 @@ const NavBarMainMobile = props => {
 
   const [showMenuCollapse, setShowMenuCollapse] = React.useState(false)
 
+  React.useEffect(()=>{
+    //chặn thanh cuộn dọc của thẻ <body> khi bật modal change hero
+    const bodyElement = document.getElementsByTagName('body')[0]
+    if(showMenuCollapse){
+      bodyElement.style.overflow = 'hidden'
+      bodyElement.style.height = '100%'
+    }
+    else{
+      bodyElement.style.overflow = 'auto'
+      bodyElement.style.height = 'auto'
+    }
+  }, [showMenuCollapse])
+
   return (
     <>
       <NavBar>

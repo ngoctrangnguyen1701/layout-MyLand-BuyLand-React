@@ -20,7 +20,7 @@ const Landplot = props => {
 
   return (
     <div className="land d-flex flex-wrap align-items-center m-auto w-100">
-      <div className="col-lg-6 d-flex h-100 mt-5 mt-lg-0">
+      <div className="col-md-12 col-lg-6 d-flex h-100 mt-5 mt-lg-0">
         <div className="land-left d-flex flex-wrap align-items-center my-auto w-100 mx-lg-4 justify-content-center justify-content-lg-left">
           <img 
             src='images/icon-close.png'
@@ -102,7 +102,7 @@ const Landplot = props => {
             }
           </div> */}
           {/* <div className=''> */}
-          <div className="land-left-img me-lg-4"></div>
+          <div className="land-left-img me-md-4"></div>
           {/* </div> */}
           {/* <div className='col-12 col-lg-6 mt-4 mt-lg-0'> */}
           <div className='flex-grow-1 mt-4 mt-lg-0'>

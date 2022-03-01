@@ -18,6 +18,10 @@ const Pagination = styled.div`
       color: ${colorGreen};
       ${textShadowGreen}
     }
+
+    @media(max-width: 1023px){
+      font-size: 20px;
+    }
   }
 `
 

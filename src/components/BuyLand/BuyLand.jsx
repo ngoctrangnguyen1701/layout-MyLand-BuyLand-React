@@ -47,7 +47,7 @@ const BuyLand = props => {
           {typeLandplot ? <Landplot/> : (
             <>
               <Landom
-                top='80%'
+                top='10%'
                 left='50%'
                 onClick={()=>dispatch({type: 'SHOW_LANDPLOT', payload: {typeLandplot: 'addToCart'}})}
               >

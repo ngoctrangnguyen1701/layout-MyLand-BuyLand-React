@@ -1,13 +1,21 @@
 import React from 'react';
+import useViewport from 'src/common/useViewport';
 
 const MyLandHeader = props => {
+  const viewPort = useViewport()
+  const isMobile = viewPort.width < 1024
+
   return (
     <>
       <div className="row content-header">
-        <div className="col-7">
-          <div className="d-flex mb-4">
-            <p className="mb-0 flex-grow-1 wallet-address">0x57D890Df853908965Be531B58816f2EfC8e392D3</p>
-            <div className="text-right">
+        <div className="col-lg-7">
+          <div className="d-lg-flex mb-4">
+            {isMobile ? (
+              <p className="mb-0 flex-grow-1 wallet-address">0x57D890Df853908965
+              <br/>Be531B58816f2EfC8e392D3</p>
+            ) : <p className="mb-0 flex-grow-1 wallet-address">0x57D890Df853908965Be531B58816f2EfC8e392D3</p>}
+            
+            <div className="text-right mt-3 mt-lg-0">
               <img src="images/icon-copy.png" className="d-inline-block me-2"/>
               <img src="images/icon-paste.png"/>
             </div>
@@ -20,7 +28,7 @@ const MyLandHeader = props => {
             <div className="content-header-hbg">HBG</div>
           </div>
         </div>
-        <div className="col-5 d-flex justify-content-end">
+        <div className="col-lg-5 d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0">
           <div>
             <div className="row">
               <div className="content-header-box me-5">

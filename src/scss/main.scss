@@ -261,8 +261,10 @@ $color-red-2: #E03500;
 /* MY LAND */
 .my-land{
   position: absolute;
-  top: 144px;
   width: 100%;
+  @media (min-width: 1024px) {
+    top: 144px;
+  }
   #content{
     background-color: #040A00;
     background-image: url('../../public/images/bg-my-land.png');
@@ -283,7 +285,11 @@ $color-red-2: #E03500;
         padding-left: 15px;
         background-color: #040F00;
         width: 400px;
-    
+
+        @media (max-width: 1023px) {
+          width: 100%;
+        }
+        
         input{
           border: none;
           outline: none;
@@ -292,6 +298,7 @@ $color-red-2: #E03500;
           flex-grow: 1;
           display: inline-block;
           margin-left: 5px;
+          width: 60%;
           
           color: #C1C1C1;
           font-family: Helvetica_Light_Oblique;
@@ -300,7 +307,8 @@ $color-red-2: #E03500;
       }
   
       &-hbg{
-        width: 112px;
+        // width: 112px;
+        flex-grow: 1;
         height: 53px;
         background-color: $color-green;
         text-align: center;

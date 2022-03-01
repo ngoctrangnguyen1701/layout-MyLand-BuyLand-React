@@ -160,12 +160,6 @@ const ChangeHeroModal = () => {
             </div>
           </ModalContent>
         </div>
-          {/* <div className='d-flex'>
-            <BtnApply 
-              onClick={()=>dispatch({type: 'EXIT_MODAL_CHANGE_HERO'})}
-            >APPLY
-            </BtnApply>
-          </div> */}
         <div className="d-flex justify-content-center mb-3 mt-4">
           <BtnEffectBorderRun
             width='145px'
