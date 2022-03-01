@@ -7,7 +7,7 @@ const MyLandContent = props => {
 
   return (
     <div className="content-main">
-      <div className="row justify-content-arround justify-content-lg-between">
+      <div className="row justify-content-around justify-content-lg-between">
         {landList.map((item, index) => <LandItem key={index} {...item}/>)}
       </div>
     </div>
