@@ -21,7 +21,7 @@ const NavBarMainMobile = props => {
   return (
     <>
       <NavBar>
-        <div className="row align-items-center">
+        <div className="d-flex align-items-center">
           <LogoImg>
             <Link to='/'>
               <img src="images/logo.png"/>

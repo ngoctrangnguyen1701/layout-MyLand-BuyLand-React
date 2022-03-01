@@ -8,7 +8,7 @@ import NavBarMainMobile from './components/NavBarMainMobile';
 
 function App() {
   const viewPort = useViewport()
-  const isMobile = viewPort.width <= 1024
+  const isMobile = viewPort.width < 1024
   // console.log({isMobile});
 
   return (

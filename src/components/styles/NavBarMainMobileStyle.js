@@ -7,7 +7,7 @@ import {
 
 export const NavBar = styled.div`
   background: black;
-  padding: '15px 10px 0 10px';
+  padding: 15px 10px 0 10px;
 `
 export const LogoImg = styled.div`
   width: 30%;
@@ -29,7 +29,7 @@ export const Title = styled.div`
 `
 export const IconMenu = styled.div`
   width: 25px;
-  margin-right: 20px;
+  margin-right: 40px;
   img{
     width: 100%;
   }

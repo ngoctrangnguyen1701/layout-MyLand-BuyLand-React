@@ -20,6 +20,20 @@ const Landom = styled.div`
   top: ${props => props.top ? props.top : '0%'};
   left: ${props => props.left ? props.left : '0%'};
 `
+const LeftFrame = styled.div`
+  @media(min-width: 1024px){
+    height: 100%
+  }
+`
+const BgLeftFrame = styled.div`
+  background-image: url('/images/bg-main.jpg');
+  background-size: cover;
+  min-height: 600px;
+  @media (min-width: 1024px) {
+    height: 100%;
+    position: absolute;
+  }
+`
 
 const BuyLand = props => {
   const typeLandplot = React.useContext(BuyLandContext).state.typeLandplot
@@ -28,8 +42,8 @@ const BuyLand = props => {
 
   return (
     <section id="content-buy-land">
-      <div className="d-lg-flex h-100">
-        <div className="col-12 col-lg-9 main d-lg-flex">
+      <LeftFrame className="d-lg-flex">
+        <BgLeftFrame className="col-12 col-lg-9 d-lg-flex main">
           {typeLandplot ? <Landplot/> : (
             <>
               <Landom
@@ -55,16 +69,16 @@ const BuyLand = props => {
               </Landom>
               <Landom
                 top='40%'
-                left='80%'
+                left='10%'
                 onClick={()=>dispatch({type: 'SHOW_LANDPLOT', payload: {typeLandplot: 'sellAndTransfer'}})}
               >
                 Landom
               </Landom>
             </>
           )}
-        </div>
+        </BgLeftFrame>
         <Sidebar/>
-      </div>
+      </LeftFrame>
     </section>
   );
 };

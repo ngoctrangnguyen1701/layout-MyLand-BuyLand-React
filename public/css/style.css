@@ -5,9 +5,14 @@
 a {
   text-decoration: none;
 }
-.row{
-  --bs-gutter-x: 0rem;
+@media (max-width: 1023px) {
+  .row{
+    --bs-gutter-x: 0rem;
+  }  
 }
+/* .row{
+  --bs-gutter-x: 0rem;
+} */
 /* @font-face {
   font-family: 'font_primary';
   src: url("../webfonts/Progress-Bold.ttf");

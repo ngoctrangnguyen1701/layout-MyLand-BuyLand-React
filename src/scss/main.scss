@@ -125,17 +125,18 @@ $color-red-2: #E03500;
   width: 100%;
   position: absolute;
   // top: 144px;
-  @media (min-width: 767px) {
+  @media (min-width: 1024px) {
     top: 144px;
   }
 
   .main{
-    background-image: url('../../public/images/bg-main.jpg');
-    height: 100%;
-    // width: 100%;
-    @media (min-width: 767px) {
-      position: absolute;
-    }
+    // background-image: url('../../public/images/bg-main.jpg');
+    // background-size: cover;
+    // height: 100%;
+    // // width: 100%;
+    // @media (min-width: 1024px) {
+    //   position: absolute;
+    // }
 
     .land{
       &-left{

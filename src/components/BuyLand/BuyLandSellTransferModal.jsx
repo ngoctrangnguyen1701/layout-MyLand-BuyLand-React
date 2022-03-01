@@ -1,11 +1,12 @@
 import React from 'react';
 import { BuyLandContext } from 'src/contexts/BuyLandContext';
+import Minning from '../Minning';
 
 import {
   Modal,
   ModalFrame,
   ModalHeader,
-  ModalContent,
+  ModalContent, 
   Input,
   HBG,
   ModalImg,
@@ -40,7 +41,7 @@ const BuyLandSellTransferModal = props => {
           {showModalTransfer && 'TRANSFER'}
         </ModalHeader>
         <ModalContent>
-            <div className="px-5 d-flex mt-5">
+            <div className="px-3 px-lg-5 d-flex my-3 my-lg-5">
               {/* CHANGE CODE IS HERE */}
               {showModalSell && 
                 <>
@@ -50,9 +51,9 @@ const BuyLandSellTransferModal = props => {
               {showModalTransfer && <Input className="form-control text-center" placeholder="Address"></Input>}
             </div>
 
-          <div className="px-5 mt-5 d-flex align-items-center">
+          <div className="px-3 px-lg-5 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-left">
             <ModalImg/>
-            <div className="flex-grow-1 ms-4">
+            <div className="flex-grow-1 ms-4 mt-3 mt-lg-0">
               <NoAndReward>
                 <label>No</label>
                 <span>051297</span>
@@ -61,10 +62,17 @@ const BuyLandSellTransferModal = props => {
                 <label>Reward</label>
                 <span>534 HBG</span>
               </NoAndReward>
-              <Progress className="mt-5">
+              {/* <Progress className="mt-5">
                 <div className="line-percent"></div>
                 <span>Minning: 50/100</span>
-              </Progress>
+              </Progress> */}
+              <Minning
+                text='Minning: 50/100'
+                percent='50%'
+                fontSize='15px'
+                height='15px'
+                top='-4px'
+              />
             </div>
           </div>
 

@@ -9,6 +9,9 @@ const IconCart = styled.img`
   margin-right: 5px;
   margin-top: -5px;
 `
+const LeftContentLandplot = styled.div`
+
+`
 
 const Landplot = props => {
   const dispatch = React.useContext(BuyLandContext).dispatch
@@ -18,13 +21,13 @@ const Landplot = props => {
   return (
     <div className="land d-flex flex-wrap align-items-center m-auto w-100">
       <div className="col-lg-6 d-flex h-100 mt-5 mt-lg-0">
-        <div className="land-left row align-items-center my-auto w-100 mx-lg-4">
+        <div className="land-left d-flex flex-wrap align-items-center my-auto w-100 mx-lg-4 justify-content-center justify-content-lg-left">
           <img 
             src='images/icon-close.png'
             className='land-left-close'
             onClick={()=>dispatch({type: 'EXIT_LANDPLOT'})}
           />
-          <img src="images/arrow.png" className="land-left-arrow"/>
+          {/* <img src="images/arrow.png" className="land-left-arrow"/> */}
           {/* <div className="land-left-img"></div> */}
           {/* <div className="land-left-info ps-4 flex-grow-1">
             <p className="landplot mb-0">LANDPLOT</p>
@@ -98,11 +101,12 @@ const Landplot = props => {
               </div>
             }
           </div> */}
-          <div className='col-lg-3'>
-            <div className="land-left-img mx-auto mx-lg-0"></div>
-          </div>
-          <div className='col-12 col-lg-9 mt-4 nt-lg-0'>
-          <p className="landplot mb-0">LANDPLOT</p>
+          {/* <div className=''> */}
+          <div className="land-left-img me-lg-4"></div>
+          {/* </div> */}
+          {/* <div className='col-12 col-lg-6 mt-4 mt-lg-0'> */}
+          <div className='flex-grow-1 mt-4 mt-lg-0'>
+            <p className="landplot mb-0">LANDPLOT</p>
             <span className="land-id-large">#051297</span>
             <div className="land-id-small">No. 051297</div>
             <div className="d-flex status-and-price">
@@ -154,6 +158,7 @@ const Landplot = props => {
                   positionCircleLeft='-8px'
                   positionCircleTop='-25px'
                   text='SELL'
+                  handleClick={()=>dispatch({type: 'SHOW_MODAL_SELL'})}
                 />
                 <div className='ms-3'>
                   <BtnEffectBorderRun
@@ -168,6 +173,7 @@ const Landplot = props => {
                     positionCircleLeft='-8px'
                     positionCircleTop='-42px'
                     text='TRANSFER'
+                    handleClick={()=>dispatch({type: 'SHOW_MODAL_TRANSFER'})}
                   />                  
                 </div>
               </div>
@@ -176,7 +182,7 @@ const Landplot = props => {
         </div>
       </div>
 
-      <div className="col-11 mx-auto mx-lg-0 col-lg-6 land-right pe-lg-4 mt-4 mt-lg-0">
+      <div className="col-11 mx-auto mx-lg-0 col-lg-6 land-right pe-lg-4 mt-4 mt-lg-0 mb-3 mb-lg-0">
         <div className="land-right-top d-flex align-items-center p-3 background-gradient-green-2">
           <div className="col-6">
             <span className="land-id-large">#51g</span>

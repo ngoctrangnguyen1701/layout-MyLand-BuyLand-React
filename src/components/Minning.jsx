@@ -28,7 +28,7 @@ const Text = styled.div`
 
   position: absolute;
   z-index: 1;
-  top: 2px;
+  top: ${props => props.top ? props.top : '2px'};
 `
 
 const Minning = props => {
@@ -36,13 +36,14 @@ const Minning = props => {
     text,
     percent,
     fontSize,
-    height
+    height,
+    top,
   } = props
 
   return (
     <Line height={height}>
       <Percent percent={percent}/>
-      <Text fontSize={fontSize}>{text}</Text>
+      <Text fontSize={fontSize} top={top}>{text}</Text>
     </Line>
   );
 };
