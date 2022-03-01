@@ -3,17 +3,13 @@ import BtnEffectBorderRun from '../BtnEffectBorderRun';
 
 const Coordinates = () => {
   return (
-    <div className="col-6 d-flex justify-content-end">
-      <div className="content-left me-5">
+    <div className="col-lg-6 d-flex justify-content-center justify-content-lg-end  mb-5 mb-lg-0 pb-3 pb-lg-0">
+      <div className="content-left me-lg-5">
         <div className="content-left-img"></div>
         <div className="content-left-text mt-4">
           <p className="mb-0">Coordinates:</p>
           <span>123.0195058, 4.063132087</span>
         </div>
-        {/* <div className='mt-3 d-flex justify-content-center'>
-          <button className="btn-view-on-map">VIEW ON MAP</button>
-        </div> */}
-        {/* <button className="btn-view-on-map mt-3 d-block mx-auto">VIEW ON MAP</button> */}
         <div className="d-flex justify-content-center mt-3">
           <BtnEffectBorderRun
             width='184px'

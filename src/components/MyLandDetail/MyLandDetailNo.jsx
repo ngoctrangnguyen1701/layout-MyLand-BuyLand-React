@@ -6,22 +6,33 @@ import {
   IconHouse,
 } from './styles/MyLandDetailNoStlye'
 import BtnEffectBorderRun from '../BtnEffectBorderRun';
+import styled from 'styled-components';
 
-const MyLandDetailNo = ({isHasHero}) => {
+const BtnSellAndTransfer = styled.div`
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+  @media(max-width: 767px){
+    margin: 10px 0;
+  }
+`
+
+const MyLandDetailNo = ({isHasHero, isMobile}) => {
+
   return (
     <>
-      <div className="d-flex align-item-center" style={{marginTop: '-25px'}}>
+      <div className="d-flex align-item-center flex-wrap" style={{marginTop: '-25px'}}>
         <div className='flex-grow-1 d-flex align-items-center'>
           <TextBorderShadow
             text='No. 051297'
-            fontSize='53px'
+            // fontSize='53px'
+            fontSize={isMobile ? '40px' : '53px'}
           />
           <IconHouse src='images/icon-house.png'/>
         </div>
         <div className="d-flex align-items-center">
           {isHasHero ? (
-            <div className="content-right-sell-and-transfer my-auto">
-              {/* <button className="btn-sell">SELL</button> */}
+            <BtnSellAndTransfer>
               <BtnEffectBorderRun
                 width='75px'
                 height='39px'
@@ -35,7 +46,6 @@ const MyLandDetailNo = ({isHasHero}) => {
                 positionCircleTop='-26px'
                 text='SELL'
               />
-              {/* <button className="btn-transfer">TRANSFER</button> */}
               <div className='d-inline-block ms-2'>
                 <BtnEffectBorderRun
                   width='117px'
@@ -51,7 +61,7 @@ const MyLandDetailNo = ({isHasHero}) => {
                   text='TRANSFER'
                 />
               </div>
-            </div>
+            </BtnSellAndTransfer>
           ) : (
             <div className='d-flex'>
               <HBG>HBG</HBG>

@@ -448,6 +448,11 @@ $color-red-2: #E03500;
         background-position: center;
         border: 1px solid $color-green;
         @extend %box-shadow-green;
+        @media (max-width: 767px) {
+          width: 16rem;
+          height: 16rem;
+          margin: 0 auto;
+        }
       }
   
       &-text{

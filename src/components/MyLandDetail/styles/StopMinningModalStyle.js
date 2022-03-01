@@ -40,6 +40,9 @@ export const ModalFrame = styled.div`
   transition: .5s;
 
   ${props => props.show && `transform: translateY(0); opacity: 1;`}
+  @media(max-width: 1023px){
+    width: 90%
+  }
 `
 
 export const ModalHeader = styled.div`

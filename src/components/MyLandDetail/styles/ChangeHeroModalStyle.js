@@ -41,6 +41,10 @@ export const ModalFrame = styled.div`
   transition: .5s;
 
   ${props => props.show && `transform: translateY(0); opacity: 1;`}
+  @media(max-width: 1023px){
+    width: 90%;
+    min-width: auto;
+  }
 `
 export const ModalHeader = styled.div`
   ${textShadowGreen}
@@ -62,6 +66,10 @@ export const ModalContent = styled.div`
   height: 500px;
   overflow-y: auto;
   margin-top: 15px;
+
+  @media(max-width: 767px){
+    height: 300px;
+  }
 
   //CHANGE STYLE SCROLLBAR
   /* width */

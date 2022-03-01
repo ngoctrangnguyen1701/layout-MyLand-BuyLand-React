@@ -10,7 +10,7 @@ const MyLandDetailPage = props => {
       <MyLandDetailContextProvider>
         <MyLandDetail/>
         <ChangeHeroModal/>
-        <StopMinningModal/>
+        <StopMinningModal/> 
       </MyLandDetailContextProvider>
     </>
   );

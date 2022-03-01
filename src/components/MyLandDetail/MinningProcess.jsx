@@ -8,31 +8,32 @@ import {
   CharacterImg,
   LeftSide,
   Icon,
-  BtnChangeHero,
-  BtnStopMinning,
   TextNoHero,
   BtnChooseHero,
 } from './styles/MinningProcessStyle'
-import { colorGradientGreen2, colorGreen, textShadowGreen } from 'src/common/styleComponentGlobal';
+import { colorGradientGreen2, colorGreen } from 'src/common/styleComponentGlobal';
 
 import BtnEffectBorderRun from '../BtnEffectBorderRun';
 import Minning from 'src/components/Minning'
 import TextBorderShadow from 'src/components/TextBorderShadow';
 
-const MinningProcess = ({isHasHero}) => {
+const MinningProcess = ({isHasHero, isMobile}) => {
   const dispatch = React.useContext(MyLandDetailContext).dispatch
 
   return (
     <div className="mt-5">
       <Title>
-        <TextBorderShadow text='Minning process'/>
+        <TextBorderShadow
+          text='Minning process'
+          fontSize={isMobile ? '34px' : '44px'}
+        />
       </Title>
       <MinningProcessFrame>
-        <div className="d-flex">
-          <RewardAndStatus>
+        <div className="d-md-flex">
+          <RewardAndStatus isMobile={isMobile}>
             <p>Reward:<span>534 HBG</span></p>
           </RewardAndStatus>
-          <RewardAndStatus className="text-right">
+          <RewardAndStatus className="text-right" isMobile={isMobile}>
             <p>Status:<span>Minning</span></p>
           </RewardAndStatus>
         </div>
@@ -45,29 +46,29 @@ const MinningProcess = ({isHasHero}) => {
         />
 
         {isHasHero ? (
-          <CharacterBox>
-            <CharacterImg/>
-            <div className="ps-3">
+          <CharacterBox style={{marginTop: isMobile ? '15px' : '50px'}}>
+            <CharacterImg isMobile={isMobile}/>
+            <div className="ps-md-3">
               <div className="d-flex align-item-center">
-                <LeftSide>
+                <LeftSide isMobile={isMobile}>
                   <p style={{fontSize: '25px'}}>#12345614</p>
                   <p>Minning:<span> 50</span></p>
                   <p>Level:<span> 4</span></p>
                   <p>Rarity:<span> 1</span></p>
-                  <p>class:<span> Warriorarrior</span></p>
+                  <p>Class:<span> Warriorarrior</span></p>
                   <p>Skin:<span> Original</span></p>
                 </LeftSide>
 
                 <div className="ms-5">
-                  <Icon>
+                  <Icon isMobile={isMobile}>
                     <img src="images/icon-proccess-plus.png"/>
                     <span>325</span>
                   </Icon>
-                  <Icon className="my-4">
+                  <Icon isMobile={isMobile} className="my-4">
                     <img src="images/icon-proccess-flame.png"/>
                     <span>643</span>
                   </Icon>
-                  <Icon>
+                  <Icon isMobile={isMobile}>
                     <img src="images/icon-proccess-arrow.png"/>
                     <span>135</span>
                   </Icon>
@@ -77,9 +78,6 @@ const MinningProcess = ({isHasHero}) => {
             
             <div className="d-flex mt-4 w-100">
               <div className="w-50 d-flex justify-content-center">
-                {/* <BtnChangeHero
-                  onClick={()=>dispatch({type: 'SHOW_MODAL_CHANGE_HERO'})}
-                >CHANGE HERO</BtnChangeHero> */}
                 <BtnEffectBorderRun
                   width='146px'
                   height='39px'
@@ -96,9 +94,6 @@ const MinningProcess = ({isHasHero}) => {
                 />
               </div>
               <div className="w-50 d-flex justify-content-center">
-                {/* <BtnStopMinning
-                  onClick={()=>dispatch({type: 'SHOW_MODAL_STOP_MINNING'})}
-                >STOP MINNING</BtnStopMinning> */}
                 <BtnEffectBorderRun
                   width='146px'
                   height='39px'
