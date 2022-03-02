@@ -8,7 +8,8 @@ const Frame = styled.div`
   display: flex;
   margin: 40px 0;
 
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     width: 35%;
     margin: 30px 0;
   }

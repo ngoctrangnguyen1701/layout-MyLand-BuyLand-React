@@ -15,8 +15,12 @@ export const Sidebar = styled.div`
   position: absolute;
   right: 0;
   z-index: 2;
-  @media (max-width: 768px) {
+  min-height: 650px;
+  width: 30%;
+  // @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     position: static;
+    width: 100%;
   }
   ${props => props.backgroundColor && `background-color: ${props.backgroundColor}`}
 `

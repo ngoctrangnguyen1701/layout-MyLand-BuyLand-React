@@ -29,7 +29,8 @@ export const Title = styled.div`
 `
 export const IconMenu = styled.div`
   width: 25px;
-  margin-right: 40px;
+  // margin-right: 40px;
+  margin-left: auto;
   img{
     width: 100%;
   }

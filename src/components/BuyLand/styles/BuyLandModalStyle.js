@@ -23,7 +23,8 @@ export const Modal = styled.div`
     z-index: 1000;
     opacity: 1;
   `}
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     position: fixed;
     height: 100%;
   }
@@ -42,7 +43,8 @@ export const ModalFrame = styled.div`
   transition: .5s;
 
   ${props => props.show && `transform: translateY(0); opacity: 1;`}
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     width: 90%
   }
 `
@@ -56,7 +58,8 @@ export const ModalHeader = styled.div`
 
   background-color: ${colorGradientGreen2};
   padding: 10px 0;
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     font-size: 20px;
   }
 `
@@ -72,7 +75,8 @@ export const ModalContent = styled.div`
     font-family: font_primary;
     color: ${colorGreen};
   }
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     font-size: 20px;
   }
 `
@@ -94,7 +98,8 @@ export const Input = styled.input`
     background: transparenst;
     color: white;
   }
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     font-size: 16px;
   }
 `
@@ -109,7 +114,8 @@ export const HBG = styled.div`
   font-family: Progress_Bold_Italic;
   font-size: 28px;
 
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     font-size: 20px;
   }
 `
@@ -133,7 +139,8 @@ export const NoAndReward = styled.div`
     display: inline-block;
     margin-left: 20px;
   }
-  @media(max-width: 1023px){
+  // @media(max-width: 1023px){
+  @media(max-width: 991px){
     font-size: 16px;
   }
 `
@@ -164,7 +171,8 @@ export const Progress = styled.div`
     top: -5px;
     left: 0;
 
-    @media(max-width: 1023px){
+    // @media(max-width: 1023px){
+      @media(max-width: 991px){
       font-size: 12px;
     }
   }

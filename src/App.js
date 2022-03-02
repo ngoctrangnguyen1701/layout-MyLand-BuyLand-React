@@ -15,7 +15,8 @@ function App() {
   return (
     <NavBarMobileContextProvider>
       <Router>
-        {isMobile ? <NavBarMainMobile/> : <NavBarMain/>}
+        {/* {isMobile ? <NavBarMainMobile/> : <NavBarMain/>} */}
+        <NavBarMain isCollapse={isMobile}/>
         
         <React.Suspense fallback={<p>Loading...</p>}>
           <Routes>

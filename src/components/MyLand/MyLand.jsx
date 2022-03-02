@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import MyLandContent from './MyLandContent';
 import MyLandHeader from './MyLandHeader';
 import MyLandPagination from './MyLandPagination';
@@ -8,7 +7,8 @@ import useViewport from 'src/common/useViewport';
 
 const MyLand = props => {
   const viewPort = useViewport()
-  const isMobile = viewPort.width < 1024
+  // const isMobile = viewPort.width < 1024
+  const isMobile = viewPort.width < 992
 
   return (
     <div className='my-land'>

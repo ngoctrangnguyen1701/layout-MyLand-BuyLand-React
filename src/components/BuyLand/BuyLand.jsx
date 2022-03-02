@@ -22,16 +22,21 @@ const Landom = styled.div`
 `
 const LeftFrame = styled.div`
   @media(min-width: 1024px){
+  // @media(min-width: 992px){
     height: 100%
   }
 `
 const BgLeftFrame = styled.div`
   background-image: url('/images/bg-main.jpg');
   background-size: cover;
-  min-height: 600px;
-  @media (min-width: 1024px) {
+  min-height: 650px;
+  width: 100%;
+  @media(min-width: 1024px){
+  // @media(min-width: 992px){
+    width: 70%;
     height: 100%;
     position: absolute;
+    display: flex;
   }
 `
 
@@ -42,8 +47,9 @@ const BuyLand = props => {
 
   return (
     <section id="content-buy-land">
-      <LeftFrame className="d-lg-flex">
-        <BgLeftFrame className="col-12 col-lg-9 d-lg-flex main">
+      <LeftFrame className="d-xl-flex">
+        {/* <BgLeftFrame className="col-12 col-xl-9 d-xl-flex main"> */}
+        <BgLeftFrame className="main">
           {typeLandplot ? <Landplot/> : (
             <>
               <Landom
