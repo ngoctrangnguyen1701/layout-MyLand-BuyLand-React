@@ -43,13 +43,17 @@ export const IconCart = styled.div`
   }
 `
 export const MenuCollapse = styled.div`
-  // display: ${props => props.show ? 'flex' : 'none'};
+  display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   background-color: black;
   width: 100%;
   height: 100%;
+  // min-height: 600px;
+
   position: fixed;
-  z-index: 1000;
+  z-index: 9;
+  top: 144px;
 
   opacity: 0;
   transform-origin: top center;
@@ -61,6 +65,15 @@ export const MenuCollapse = styled.div`
     opacity: 1;
     transition: .3s;
   `}
+
+  @media (max-width: 600px){
+    top: 115px;
+  }
+  @media (min-width: 601px){
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+  }
 `
 export const MenuItem = styled.div`
   padding: 15px 0;
@@ -78,6 +91,19 @@ export const MenuItem = styled.div`
       color: ${colorGreen};
       transition: .3s;
     }
+  }
+  .address{
+    width: 300px;
+  }
+  @media (min-width: 601px){
+    width: 150px;
+    height: 70px;
+  }
+`
+export const MenuItemAddress = styled(MenuItem)`
+  @media (min-width: 601px){
+    width: 300px;
+    height: 70px;
   }
 `
 export const Address = styled.div`

@@ -14,7 +14,7 @@ export const Sidebar = styled.div`
   color: white;
   position: absolute;
   right: 0;
-  z-index: 2;
+  z-index: 20;
   min-height: 650px;
   width: 30%;
   // @media (max-width: 768px) {
