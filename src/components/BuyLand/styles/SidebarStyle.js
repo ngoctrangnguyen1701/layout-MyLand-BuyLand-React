@@ -27,7 +27,7 @@ export const Sidebar = styled.div`
 
 export const SidebarHeader = styled.div`
   font-size: 43px;
-  padding: 20px 30px; 
+  padding: 0 20px; 
 `
 
 export const SidebarNumBasket = styled.span`
@@ -45,7 +45,7 @@ export const SidebarLine = styled.div`
 `
 
 export const SidebarContent = styled.div`
-  padding: 20px 30px;
+  padding: 15px 20px 0 20px;
   .title {
     color: white;
     font-size: 23px;
@@ -54,14 +54,16 @@ export const SidebarContent = styled.div`
 
 export const SidebarLandplots = styled.div`
   padding-left: 10px; 
-  // margin-top: 20px;
-  margin: 20px 0 0 0;
+  // margin: 15px 0 0 0;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
 
-  .col-4{
+  // .col-4, .col-6 .col-md-4{
+  .column{
     padding-left: 0;
     padding-right: 10px;
+    min-width: 100px;
   }
 `
 

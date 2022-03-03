@@ -35,28 +35,28 @@ const Cart = props => {
       <SidebarContent>
         <div className="title">Landplots</div>
         <SidebarLandplots>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
-          <div className="col-4">
+          <div className="col-6 col-md-4 column">
             <SidebarLandplotsItem>051297</SidebarLandplotsItem>
           </div>
       </SidebarLandplots>

@@ -46,6 +46,7 @@ export const MenuCollapse = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
   background-color: black;
   width: 100%;
   height: 100%;
@@ -69,7 +70,8 @@ export const MenuCollapse = styled.div`
   @media (max-width: 600px){
     top: 115px;
   }
-  @media (min-width: 601px){
+  // @media (min-width: 601px), (max-height: 500px){
+  @media (max-height: 500px){
     flex-direction: row;
     align-content: flex-start;
     justify-content: center;
@@ -95,13 +97,15 @@ export const MenuItem = styled.div`
   .address{
     width: 300px;
   }
-  @media (min-width: 601px){
+  // @media (min-width: 601px), (max-height: 500px){
+  @media (max-height: 500px){
     width: 150px;
     height: 70px;
   }
 `
 export const MenuItemAddress = styled(MenuItem)`
-  @media (min-width: 601px){
+  // @media (min-width: 601px){
+  @media (max-height: 500px){
     width: 300px;
     height: 70px;
   }

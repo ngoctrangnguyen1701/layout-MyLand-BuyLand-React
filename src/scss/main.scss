@@ -90,6 +90,8 @@ $color-red-2: #E03500;
         &-img{
           width: 175px;
           height: 175px;
+          // max-width: 175px;
+          // max-height: 175px;
           border: 1px solid $color-green;
           background-image: url('../../public/images/land.png');
           background-position: center;
@@ -126,11 +128,6 @@ $color-red-2: #E03500;
           font-size: 13px;
           @extend %text-shadow-green;
         }
-      }
-  
-      &-right-bottom{
-        background-image: url('../../public/images/bg-land-right-01.jpg');
-        height: 520px;
       }
     }
     

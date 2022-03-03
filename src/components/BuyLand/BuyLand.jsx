@@ -31,12 +31,14 @@ const BgLeftFrame = styled.div`
   background-size: cover;
   min-height: 650px;
   width: 100%;
+  display: flex;
+
   @media(min-width: 1024px){
   // @media(min-width: 992px){
     width: 70%;
     height: 100%;
     position: absolute;
-    display: flex;
+    // display: flex;
   }
 `
 
