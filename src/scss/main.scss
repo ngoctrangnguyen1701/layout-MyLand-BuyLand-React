@@ -359,39 +359,6 @@ $color-red-2: #E03500;
       background-image: linear-gradient(-45deg, #00FFA9, #00B1FF);
     }
   
-    &-left{
-      // &-img{
-      //   width: 463px;
-      //   height: 463px;
-      //   background-image: url('../../public/images/land-large-01.png');
-      //   background-position: center;
-      //   border: 1px solid $color-green;
-      //   @extend %box-shadow-green;
-      //   @media (max-width: 767px) {
-      //     width: 16rem;
-      //     height: 16rem;
-      //     margin: 0 auto;
-      //   }
-      // }
-  
-      &-text{
-        font-size: 27px;
-        color: $color-green;
-        text-align: center;
-        span{
-          color: white;
-          @extend %text-shadow-green;
-        }
-      }
-    }
-  
-    .btn-view-on-map{
-      @include btnGradient(bottom, #FF5200, #450C00, #FF5200, 2px 2px 15px rgba(255, 82, 0, 0.8));
-      font-size: 18px;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-  
     &-right{
   
       .btn-sell, .btn-transfer, .btn-change-hero, .btn-stop-minning{

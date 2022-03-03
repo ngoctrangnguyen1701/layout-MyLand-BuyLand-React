@@ -27,6 +27,19 @@ const BtnBox = styled.div`
     width: 100%
   }
 `
+const InfoHero = styled.div`
+  display: flex;
+  align-item: center;
+  margin-top: 15px;
+  flex-grow: 1;
+  min-width: 350px;
+  padding: 0 15px;
+  
+  @media(max-width: 600px){
+    min-width: 100%;
+    padding: 0;
+  }
+`
 
 const MinningProcess = ({isHasHero, isMobile}) => {
   const dispatch = React.useContext(MyLandDetailContext).dispatch
@@ -59,8 +72,7 @@ const MinningProcess = ({isHasHero, isMobile}) => {
         {isHasHero ? (
           <CharacterBox style={{marginTop: isMobile ? '15px' : ''}}>
             <CharacterImg isMobile={isMobile}/>
-            <div className="px-3 flex-grow-1 d-flex align-item-center mt-3">
-
+            <InfoHero>
               <LeftSide isMobile={isMobile}>
                 <p style={{fontSize: '25px'}}>#12345614</p>
                 <p>Minning:<span> 50</span></p>
@@ -84,7 +96,7 @@ const MinningProcess = ({isHasHero, isMobile}) => {
                   <span>135</span>
                 </Icon>
               </div>
-            </div>
+            </InfoHero>
             
             <div className="d-flex flex-wrap w-100">
               <BtnBox>
