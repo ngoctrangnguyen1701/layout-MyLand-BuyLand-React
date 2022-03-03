@@ -11,7 +11,6 @@ import {
   HeroImg,
   HeroId,
   HeroText,
-  BtnApply,
 } from './styles/ChangeHeroModalStyle'
 import BtnEffectBorderRun from '../BtnEffectBorderRun';
 
@@ -44,7 +43,7 @@ const ChangeHeroModal = () => {
         <ModalHeader>CHANGE HERO</ModalHeader>
         <div className='pe-3'>
           <ModalContent>
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -57,7 +56,7 @@ const ChangeHeroModal = () => {
               </HeroItem>
             </div>
 
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -70,7 +69,7 @@ const ChangeHeroModal = () => {
               </HeroItem>
             </div>
 
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -83,7 +82,7 @@ const ChangeHeroModal = () => {
               </HeroItem>
             </div>
 
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -96,7 +95,7 @@ const ChangeHeroModal = () => {
               </HeroItem>
             </div>
 
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -109,7 +108,7 @@ const ChangeHeroModal = () => {
               </HeroItem>
             </div>
 
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -121,7 +120,7 @@ const ChangeHeroModal = () => {
                 </HeroText>
               </HeroItem>
             </div>
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -133,7 +132,7 @@ const ChangeHeroModal = () => {
                 </HeroText>
               </HeroItem>
             </div>
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>
@@ -145,7 +144,7 @@ const ChangeHeroModal = () => {
                 </HeroText>
               </HeroItem>
             </div>
-            <div className="col-12 col-md-4 d-flex">
+            <div className="col-12 col-sm-4 d-flex">
               <HeroItem>
                 <HeroImg/>
                 <HeroId>#123456</HeroId>

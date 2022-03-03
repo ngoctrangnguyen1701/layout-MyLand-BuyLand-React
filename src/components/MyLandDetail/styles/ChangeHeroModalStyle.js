@@ -64,7 +64,7 @@ export const ModalContent = styled.div`
   color: white;
   text-align: center;
 
-  height: 500px;
+  height: 450px;
   overflow-y: auto;
   margin-top: 15px;
 

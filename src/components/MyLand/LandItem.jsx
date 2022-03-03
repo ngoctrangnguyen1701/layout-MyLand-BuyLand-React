@@ -5,10 +5,10 @@ import BtnEffectBorderRun from '../BtnEffectBorderRun';
 
 const Frame = styled.div`
   width: 20% ;
+  max-width: 250px;
   display: flex;
   margin: 40px 0;
 
-  // @media(max-width: 1023px){
   @media(max-width: 991px){
     width: 35%;
     margin: 30px 0;

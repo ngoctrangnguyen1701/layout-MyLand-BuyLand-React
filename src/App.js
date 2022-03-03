@@ -4,7 +4,6 @@ import NavBarMain from './components/NavBarMain';
 import './scss/main.scss'
 import routes from './common/routes';
 import useViewport from 'src/common/useViewport';
-import NavBarMainMobile from './components/NavBarMainMobile';
 import NavBarMobileContextProvider from 'src/contexts/NavBarMobileContext'
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
   return (
     <NavBarMobileContextProvider>
       <Router>
-        {/* {isMobile ? <NavBarMainMobile/> : <NavBarMain/>} */}
         <NavBarMain isCollapse={isMobile}/>
         
         <React.Suspense fallback={<p>Loading...</p>}>

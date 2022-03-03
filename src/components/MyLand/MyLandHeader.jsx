@@ -3,7 +3,8 @@ import useViewport from 'src/common/useViewport';
 
 const MyLandHeader = props => {
   const viewPort = useViewport()
-  const isMobile = viewPort.width < 1024
+  // const isMobile = viewPort.width < 1024
+  const isMobile = viewPort.width < 1200
 
   return (
     <>
@@ -28,10 +29,10 @@ const MyLandHeader = props => {
             <div className="content-header-hbg">HBG</div>
           </div>
         </div>
-        <div className="col-lg-5 d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0">
+        <div className="col-lg-5 d-flex justify-content-center justify-content-lg-end">
           <div>
             <div className="row">
-              <div className="content-header-box me-5">
+              <div className="content-header-box me-3 me-lg-5 mt-3 mt-lg-0">
                 <div className="m-auto">
                   <img src="images/icon-land.png"/>
                   <p className="mb-0">
@@ -40,7 +41,7 @@ const MyLandHeader = props => {
                   </p>
                 </div>
               </div>
-              <div className="content-header-box">
+              <div className="content-header-box mt-3 mt-lg-0">
                 <div className="m-auto">
                   <img src="images/icon-hero.png"/>
                   <p className="mb-0">

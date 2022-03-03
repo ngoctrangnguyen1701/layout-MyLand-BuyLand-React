@@ -179,9 +179,9 @@ $color-red-2: #E03500;
 .my-land{
   position: absolute;
   width: 100%;
-  // @media (min-width: 1024px) {
-    @media (min-width: 992px){
-    top: 144px;
+  top: 144px;
+  @media (max-width: 600px) {
+    top: 115px;
   }
   #content{
     background-color: #040A00;
@@ -204,8 +204,8 @@ $color-red-2: #E03500;
         background-color: #040F00;
         width: 400px;
 
-        // @media (max-width: 1023px) {
-        @media (max-width: 991px) {
+        @media (max-width: 1023px) {
+        // @media (max-width: 991px) {
           width: 100%;
         }
         
@@ -278,7 +278,7 @@ $color-red-2: #E03500;
   
     &-main{
       &-box{
-        width: 172px;
+        // width: 172px;
   
         &-img{
           background-image: url('../../public/images/land.png');
@@ -360,19 +360,19 @@ $color-red-2: #E03500;
     }
   
     &-left{
-      &-img{
-        width: 463px;
-        height: 463px;
-        background-image: url('../../public/images/land-large-01.png');
-        background-position: center;
-        border: 1px solid $color-green;
-        @extend %box-shadow-green;
-        @media (max-width: 767px) {
-          width: 16rem;
-          height: 16rem;
-          margin: 0 auto;
-        }
-      }
+      // &-img{
+      //   width: 463px;
+      //   height: 463px;
+      //   background-image: url('../../public/images/land-large-01.png');
+      //   background-position: center;
+      //   border: 1px solid $color-green;
+      //   @extend %box-shadow-green;
+      //   @media (max-width: 767px) {
+      //     width: 16rem;
+      //     height: 16rem;
+      //     margin: 0 auto;
+      //   }
+      // }
   
       &-text{
         font-size: 27px;

@@ -17,7 +17,6 @@ export const Title = styled.div`
   background-size: 443px 15px;
 `
 export const RewardAndStatus = styled.div`
-  // width: 50%;
   width: ${props => props.isMobile ? '100%' : '50%'};
   font-size: 20px;
   color: ${colorGreen};
@@ -32,7 +31,6 @@ export const RewardAndStatus = styled.div`
 export const CharacterBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-  // margin-top: 50px;
 `
 export const CharacterImg = styled.div`
   width: 167px;
@@ -41,7 +39,8 @@ export const CharacterImg = styled.div`
   background-image: url('/images/character.jpg');
   background-position: center;
   background-size: cover;
-  ${props => props.isMobile ? 'margin: 0 auto 15px;' : ''}
+  margin: 15px auto 0;
+  // ${props => props.isMobile ? 'margin: 0 auto 15px;' : ''}
 `
 export const LeftSide = styled.div`
   font-family: HemiHeadRg_BoldItalic;

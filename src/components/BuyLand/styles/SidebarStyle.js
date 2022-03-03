@@ -17,7 +17,6 @@ export const Sidebar = styled.div`
   z-index: 20;
   min-height: 650px;
   width: 30%;
-  // @media (max-width: 768px) {
   @media (max-width: 1023px) {
     position: static;
     width: 100%;
@@ -54,12 +53,10 @@ export const SidebarContent = styled.div`
 
 export const SidebarLandplots = styled.div`
   padding-left: 10px; 
-  // margin: 15px 0 0 0;
   margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
 
-  // .col-4, .col-6 .col-md-4{
   .column{
     padding-left: 0;
     padding-right: 10px;

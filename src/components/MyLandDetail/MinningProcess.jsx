@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { MyLandDetailContext } from 'src/contexts/MyLandDetailContext';
 import {
   MinningProcessFrame,
@@ -16,6 +17,16 @@ import { colorGradientGreen2, colorGreen } from 'src/common/styleComponentGlobal
 import BtnEffectBorderRun from '../BtnEffectBorderRun';
 import Minning from 'src/components/Minning'
 import TextBorderShadow from 'src/components/TextBorderShadow';
+
+const BtnBox = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  @media(max-width: 400px){
+    width: 100%
+  }
+`
 
 const MinningProcess = ({isHasHero, isMobile}) => {
   const dispatch = React.useContext(MyLandDetailContext).dispatch
@@ -46,38 +57,37 @@ const MinningProcess = ({isHasHero, isMobile}) => {
         />
 
         {isHasHero ? (
-          <CharacterBox style={{marginTop: isMobile ? '15px' : '50px'}}>
+          <CharacterBox style={{marginTop: isMobile ? '15px' : ''}}>
             <CharacterImg isMobile={isMobile}/>
-            <div className="ps-md-3">
-              <div className="d-flex align-item-center">
-                <LeftSide isMobile={isMobile}>
-                  <p style={{fontSize: '25px'}}>#12345614</p>
-                  <p>Minning:<span> 50</span></p>
-                  <p>Level:<span> 4</span></p>
-                  <p>Rarity:<span> 1</span></p>
-                  <p>Class:<span> Warriorarrior</span></p>
-                  <p>Skin:<span> Original</span></p>
-                </LeftSide>
+            <div className="px-3 flex-grow-1 d-flex align-item-center mt-3">
 
-                <div className="ms-5">
-                  <Icon isMobile={isMobile}>
-                    <img src="images/icon-proccess-plus.png"/>
-                    <span>325</span>
-                  </Icon>
-                  <Icon isMobile={isMobile} className="my-4">
-                    <img src="images/icon-proccess-flame.png"/>
-                    <span>643</span>
-                  </Icon>
-                  <Icon isMobile={isMobile}>
-                    <img src="images/icon-proccess-arrow.png"/>
-                    <span>135</span>
-                  </Icon>
-                </div>
+              <LeftSide isMobile={isMobile}>
+                <p style={{fontSize: '25px'}}>#12345614</p>
+                <p>Minning:<span> 50</span></p>
+                <p>Level:<span> 4</span></p>
+                <p>Rarity:<span> 1</span></p>
+                <p>Class:<span> Warriorarrior</span></p>
+                <p>Skin:<span> Original</span></p>
+              </LeftSide>
+
+              <div className="ms-auto">
+                <Icon isMobile={isMobile}>
+                  <img src="images/icon-proccess-plus.png"/>
+                  <span>325</span>
+                </Icon>
+                <Icon isMobile={isMobile} className="my-4">
+                  <img src="images/icon-proccess-flame.png"/>
+                  <span>643</span>
+                </Icon>
+                <Icon isMobile={isMobile}>
+                  <img src="images/icon-proccess-arrow.png"/>
+                  <span>135</span>
+                </Icon>
               </div>
             </div>
             
-            <div className="d-flex mt-4 w-100">
-              <div className="w-50 d-flex justify-content-center">
+            <div className="d-flex flex-wrap w-100">
+              <BtnBox>
                 <BtnEffectBorderRun
                   width='146px'
                   height='39px'
@@ -92,8 +102,8 @@ const MinningProcess = ({isHasHero, isMobile}) => {
                   text='CHANGE HERO'
                   handleClick={()=>dispatch({type: 'SHOW_MODAL_CHANGE_HERO'})}
                 />
-              </div>
-              <div className="w-50 d-flex justify-content-center">
+              </BtnBox>
+              <BtnBox>
                 <BtnEffectBorderRun
                   width='146px'
                   height='39px'
@@ -108,7 +118,7 @@ const MinningProcess = ({isHasHero, isMobile}) => {
                   text='STOP MINNING'
                   handleClick={()=>dispatch({type: 'SHOW_MODAL_STOP_MINNING'})}
                 />
-              </div>
+              </BtnBox>
             </div>
           </CharacterBox>
         ) : (
